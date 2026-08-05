@@ -1,0 +1,661 @@
+
+/* =========================================
+   STUDENTHUB - COURSES PAGE
+   PREMIUM PURPLE GLASSMORPHISM DESIGN
+   ========================================= */
+
+
+/* =========================================
+   BASIC RESET
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(139, 92, 246, 0.32),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 85%,
+            rgba(99, 102, 241, 0.32),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #0f0725,
+            #24104f,
+            #3b176d
+        );
+
+    color: white;
+
+    overflow-x: hidden;
+
+    padding: 50px 25px;
+}
+
+
+/* =========================================
+   ANIMATED BACKGROUND
+   ========================================= */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(168, 85, 247, 0.15);
+
+    top: -100px;
+    left: -100px;
+
+    filter: blur(10px);
+
+    animation: floatingGlow 8s ease-in-out infinite;
+
+    z-index: -1;
+}
+
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: rgba(79, 70, 229, 0.15);
+
+    right: -120px;
+    bottom: -120px;
+
+    filter: blur(10px);
+
+    animation: floatingGlow 10s ease-in-out infinite reverse;
+
+    z-index: -1;
+}
+
+
+@keyframes floatingGlow {
+
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(35px, 30px) scale(1.12);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+
+/* =========================================
+   MAIN
+   ========================================= */
+
+main {
+
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   COURSES SECTION
+   ========================================= */
+
+.courses {
+
+    width: 100%;
+
+    padding: 40px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.15),
+            rgba(255, 255, 255, 0.06)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.20);
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 25px 65px rgba(0, 0, 0, 0.38),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+
+    position: relative;
+
+    overflow: hidden;
+
+    animation: sectionAppear 0.9s ease forwards;
+}
+
+
+@keyframes sectionAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(35px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================
+   GLOWING TOP BORDER
+   ========================================= */
+
+.courses::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6366f1,
+            #8b5cf6,
+            #c084fc,
+            #6366f1
+        );
+
+    box-shadow:
+        0 0 20px rgba(168, 85, 247, 0.8);
+}
+
+
+/* =========================================
+   COURSES TITLE
+   ========================================= */
+
+.courses > h2 {
+
+    text-align: center;
+
+    font-size: 38px;
+
+    font-weight: 800;
+
+    margin-bottom: 35px;
+
+    color: white;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 0 15px rgba(168, 85, 247, 0.45);
+}
+
+
+/* =========================================
+   COURSE GRID
+   ========================================= */
+
+.course-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =========================================
+   COURSE CARD
+   ========================================= */
+
+.course-card {
+
+    min-height: 250px;
+
+    padding: 28px 25px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.12),
+            rgba(255, 255, 255, 0.05)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    text-align: left;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+
+    animation: cardAppear 0.8s ease both;
+}
+
+
+/* Individual animation delays */
+
+.course-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.course-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.course-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.course-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.course-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.course-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================================
+   CARD GLOW
+   ========================================= */
+
+.course-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    background: rgba(168, 85, 247, 0.15);
+
+    right: -40px;
+    top: -40px;
+
+    filter: blur(5px);
+
+    transition: 0.5s;
+}
+
+
+/* =========================================
+   CARD HOVER
+   ========================================= */
+
+.course-card:hover {
+
+    transform:
+        translateY(-10px)
+        scale(1.02);
+
+    border-color:
+        rgba(192, 132, 252, 0.55);
+
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.30),
+        0 0 25px rgba(168, 85, 247, 0.20);
+}
+
+
+.course-card:hover::before {
+
+    transform: scale(2);
+
+    background:
+        rgba(168, 85, 247, 0.20);
+}
+
+
+/* =========================================
+   COURSE TITLE
+   ========================================= */
+
+.course-card h4 {
+
+    font-size: 20px;
+
+    line-height: 1.35;
+
+    margin-bottom: 15px;
+
+    color: #f5f3ff;
+
+    transition: 0.3s;
+}
+
+
+.course-card:hover h4 {
+
+    color: #e9d5ff;
+
+    text-shadow:
+        0 0 12px rgba(216, 180, 254, 0.45);
+}
+
+
+/* =========================================
+   COURSE DESCRIPTION
+   ========================================= */
+
+.course-card p {
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   COURSE DURATION
+   ========================================= */
+
+.course-card span {
+
+    display: inline-block;
+
+    align-self: flex-start;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(139, 92, 246, 0.16);
+
+    border:
+        1px solid rgba(192, 132, 252, 0.25);
+
+    color: #ddd6fe;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+
+.course-card:hover span {
+
+    background:
+        rgba(139, 92, 246, 0.28);
+
+    border-color:
+        rgba(216, 180, 254, 0.45);
+
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   BACK TO HOME FORM
+   ========================================= */
+
+main > form {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 30px;
+}
+
+
+/* =========================================
+   BACK TO HOME BUTTON
+   ========================================= */
+
+main > form button {
+
+    padding: 14px 30px;
+
+    border-radius: 30px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.25);
+
+    background:
+        rgba(255, 255, 255, 0.09);
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+
+    transition: all 0.35s ease;
+}
+
+
+main > form button:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #9333ea
+        );
+
+    border-color:
+        rgba(255, 255, 255, 0.35);
+
+    transform:
+        translateY(-5px)
+        scale(1.03);
+
+    box-shadow:
+        0 10px 30px rgba(168, 85, 247, 0.45),
+        0 0 20px rgba(168, 85, 247, 0.25);
+}
+
+
+main > form button:active {
+
+    transform: scale(0.96);
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 950px) {
+
+    body {
+        padding: 35px 18px;
+    }
+
+    .courses {
+        padding: 30px 25px;
+    }
+
+    .course-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 25px 12px;
+    }
+
+    .courses {
+
+        padding: 28px 16px;
+
+        border-radius: 22px;
+    }
+
+    .courses > h2 {
+
+        font-size: 30px;
+
+        margin-bottom: 25px;
+    }
+
+    .course-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .course-card {
+
+        min-height: 220px;
+
+        padding: 23px 20px;
+    }
+
+    .course-card h4 {
+
+        font-size: 18px;
+    }
+
+    .course-card p {
+
+        font-size: 13px;
+    }
+
+    main > form button {
+
+        width: 210px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    .courses > h2 {
+
+        font-size: 26px;
+    }
+
+    .course-card {
+
+        padding: 20px 17px;
+    }
+
+    .course-card h4 {
+
+        font-size: 17px;
+    }
+}

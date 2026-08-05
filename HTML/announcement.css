@@ -1,0 +1,632 @@
+
+/* =========================================
+   STUDENTHUB - ANNOUNCEMENTS PAGE
+   PREMIUM PURPLE GLASSMORPHISM DESIGN
+   ========================================= */
+
+
+/* =========================================
+   RESET
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    min-height: 100vh;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(139, 92, 246, 0.30),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 85%,
+            rgba(99, 102, 241, 0.28),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #0f0725,
+            #24104f,
+            #3b176d
+        );
+
+    padding: 30px 20px 50px;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   ANIMATED BACKGROUND GLOW
+   ========================================= */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    width: 330px;
+    height: 330px;
+
+    border-radius: 50%;
+
+    background: rgba(168, 85, 247, 0.15);
+
+    top: -120px;
+    left: -100px;
+
+    filter: blur(10px);
+
+    animation: floatingGlow 8s ease-in-out infinite;
+
+    z-index: -1;
+}
+
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    width: 370px;
+    height: 370px;
+
+    border-radius: 50%;
+
+    background: rgba(79, 70, 229, 0.15);
+
+    right: -130px;
+    bottom: -130px;
+
+    filter: blur(10px);
+
+    animation: floatingGlow 10s ease-in-out infinite reverse;
+
+    z-index: -1;
+}
+
+
+@keyframes floatingGlow {
+
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(35px, 30px) scale(1.12);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+    animation: headerAppear 0.8s ease;
+}
+
+
+@keyframes headerAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   PROFILE ICON
+   ========================================= */
+
+header img {
+
+    width: 105px;
+    height: 105px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid white;
+
+    padding: 5px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 0 20px rgba(168, 85, 247, 0.7),
+        0 0 45px rgba(124, 58, 237, 0.35);
+
+    animation: iconFloat 4s ease-in-out infinite;
+
+    transition: 0.4s;
+}
+
+
+header img:hover {
+
+    transform:
+        scale(1.1)
+        rotate(5deg);
+
+    box-shadow:
+        0 0 30px rgba(255, 255, 255, 0.8),
+        0 0 60px rgba(168, 85, 247, 0.8);
+}
+
+
+@keyframes iconFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   PAGE TITLE
+   ========================================= */
+
+header h1 {
+
+    margin-top: 15px;
+
+    font-size: 34px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    text-shadow:
+        0 0 15px rgba(168, 85, 247, 0.45);
+}
+
+
+/* =========================================
+   ANNOUNCEMENT CONTAINER
+   ========================================= */
+
+section {
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+
+    padding: 10px;
+}
+
+
+/* =========================================
+   ANNOUNCEMENT CARD
+   ========================================= */
+
+article {
+
+    position: relative;
+
+    padding: 27px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.14),
+            rgba(255, 255, 255, 0.05)
+        );
+
+    border:
+        1px solid rgba(255, 255, 255, 0.16);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.10);
+
+    overflow: hidden;
+
+    text-align: left;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+
+    animation: cardAppear 0.7s ease both;
+}
+
+
+/* =========================================
+   INDIVIDUAL CARD ANIMATION DELAY
+   ========================================= */
+
+article:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+article:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+article:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+article:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+article:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   CARD TOP GLOW
+   ========================================= */
+
+article::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6366f1,
+            #8b5cf6,
+            #c084fc
+        );
+
+    box-shadow:
+        0 0 15px rgba(168, 85, 247, 0.7);
+}
+
+
+/* =========================================
+   CARD GLOW EFFECT
+   ========================================= */
+
+article::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    background: rgba(168, 85, 247, 0.10);
+
+    right: -55px;
+    bottom: -55px;
+
+    filter: blur(5px);
+
+    transition: 0.4s;
+}
+
+
+article:hover {
+
+    transform:
+        translateY(-8px)
+        scale(1.015);
+
+    border-color:
+        rgba(192, 132, 252, 0.40);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.35),
+        0 0 25px rgba(139, 92, 246, 0.18);
+}
+
+
+article:hover::after {
+
+    transform: scale(1.7);
+
+    background:
+        rgba(168, 85, 247, 0.16);
+}
+
+
+/* =========================================
+   ANNOUNCEMENT TITLE
+   ========================================= */
+
+article h3 {
+
+    position: relative;
+
+    z-index: 1;
+
+    font-size: 20px;
+
+    line-height: 1.4;
+
+    margin-bottom: 13px;
+
+    color: #f5f3ff;
+
+    text-shadow:
+        0 0 10px rgba(168, 85, 247, 0.25);
+
+    transition: 0.3s;
+}
+
+
+article:hover h3 {
+
+    color: #e9d5ff;
+
+    text-shadow:
+        0 0 15px rgba(192, 132, 252, 0.45);
+}
+
+
+/* =========================================
+   DATE
+   ========================================= */
+
+article p:first-of-type {
+
+    display: inline-block;
+
+    position: relative;
+
+    z-index: 1;
+
+    padding: 7px 13px;
+
+    margin-bottom: 15px;
+
+    border-radius: 20px;
+
+    color: #ddd6fe;
+
+    background:
+        rgba(124, 58, 237, 0.22);
+
+    border:
+        1px solid rgba(192, 132, 252, 0.22);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================================
+   ANNOUNCEMENT DESCRIPTION
+   ========================================= */
+
+article p:last-child {
+
+    position: relative;
+
+    z-index: 1;
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+
+
+/* =========================================
+   BACK TO HOME BUTTON
+   ========================================= */
+
+.button-back {
+
+    display: block;
+
+    margin: 35px auto 0;
+
+    padding: 14px 32px;
+
+    border-radius: 30px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.25);
+
+    background:
+        rgba(255, 255, 255, 0.09);
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+
+    transition: all 0.35s ease;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+
+.button-back:hover {
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #9333ea
+        );
+
+    transform:
+        translateY(-5px)
+        scale(1.04);
+
+    box-shadow:
+        0 12px 30px rgba(168, 85, 247, 0.45),
+        0 0 20px rgba(168, 85, 247, 0.25);
+}
+
+
+.button-back:active {
+
+    transform: scale(0.96);
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 750px) {
+
+    body {
+
+        padding: 20px 12px 40px;
+    }
+
+    header img {
+
+        width: 90px;
+        height: 90px;
+    }
+
+    header h1 {
+
+        font-size: 27px;
+    }
+
+    section {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        padding: 5px;
+    }
+
+    article {
+
+        padding: 23px;
+    }
+
+    article h3 {
+
+        font-size: 19px;
+    }
+
+    article p:last-child {
+
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    header h1 {
+
+        font-size: 23px;
+    }
+
+    article {
+
+        padding: 20px;
+    }
+
+    article h3 {
+
+        font-size: 18px;
+    }
+
+    .button-back {
+
+        width: 210px;
+    }
+}

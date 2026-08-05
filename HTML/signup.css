@@ -1,0 +1,617 @@
+
+/* =========================================
+   STUDENTHUB - SIGN UP PAGE
+   PREMIUM PURPLE GLASSMORPHISM DESIGN
+   ========================================= */
+
+
+/* =========================================
+   BASIC RESET
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(139, 92, 246, 0.32),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 85%,
+            rgba(99, 102, 241, 0.32),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #0f0725,
+            #24104f,
+            #3b176d
+        );
+
+    color: white;
+
+    overflow-x: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px 20px;
+}
+
+
+/* =========================================
+   ANIMATED BACKGROUND
+   ========================================= */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(168, 85, 247, 0.15);
+
+    top: -100px;
+    left: -100px;
+
+    filter: blur(10px);
+
+    animation: floatingGlow 8s ease-in-out infinite;
+
+    z-index: -1;
+}
+
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: rgba(79, 70, 229, 0.15);
+
+    right: -120px;
+    bottom: -120px;
+
+    filter: blur(10px);
+
+    animation: floatingGlow 10s ease-in-out infinite reverse;
+
+    z-index: -1;
+}
+
+
+@keyframes floatingGlow {
+
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(35px, 30px) scale(1.12);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+   ========================================= */
+
+.container {
+
+    width: 100%;
+
+    max-width: 520px;
+
+    padding: 40px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.16),
+            rgba(255, 255, 255, 0.06)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.22);
+
+    backdrop-filter: blur(22px);
+
+    -webkit-backdrop-filter: blur(22px);
+
+    box-shadow:
+        0 25px 65px rgba(0, 0, 0, 0.40),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+
+    position: relative;
+
+    overflow: hidden;
+
+    animation: containerAppear 0.9s ease forwards;
+}
+
+
+@keyframes containerAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(35px)
+            scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================
+   GLOWING TOP LINE
+   ========================================= */
+
+.container::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6366f1,
+            #8b5cf6,
+            #c084fc,
+            #6366f1
+        );
+
+    box-shadow:
+        0 0 20px rgba(168, 85, 247, 0.8);
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   STUDENT IMAGE
+   ========================================= */
+
+header img {
+
+    width: 115px;
+    height: 115px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid white;
+
+    padding: 5px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    box-shadow:
+        0 0 20px rgba(168, 85, 247, 0.7),
+        0 0 45px rgba(124, 58, 237, 0.4);
+
+    animation: imageFloat 4s ease-in-out infinite;
+
+    transition: 0.4s;
+}
+
+
+header img:hover {
+
+    transform:
+        scale(1.1)
+        rotate(5deg);
+
+    box-shadow:
+        0 0 30px rgba(255, 255, 255, 0.8),
+        0 0 60px rgba(168, 85, 247, 0.8);
+}
+
+
+@keyframes imageFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   SIGN UP HEADING
+   ========================================= */
+
+header h2 {
+
+    margin-top: 18px;
+
+    font-size: 29px;
+
+    font-weight: 800;
+
+    color: white;
+
+    text-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.30);
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   FORM
+   ========================================= */
+
+form {
+
+    width: 100%;
+}
+
+
+/* =========================================
+   LABELS
+   ========================================= */
+
+label {
+
+    display: block;
+
+    text-align: left;
+
+    margin-bottom: 8px;
+
+    color: #ede9fe;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   INPUT FIELDS
+   ========================================= */
+
+input {
+
+    width: 100%;
+
+    padding: 14px 17px;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.20);
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: white;
+
+    font-size: 15px;
+
+    transition: all 0.3s ease;
+
+    box-shadow:
+        inset 0 1px 5px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Placeholder */
+
+input::placeholder {
+
+    color: rgba(255, 255, 255, 0.45);
+}
+
+
+/* Input Focus */
+
+input:focus {
+
+    border-color: #c084fc;
+
+    background: rgba(255, 255, 255, 0.14);
+
+    box-shadow:
+        0 0 0 3px rgba(168, 85, 247, 0.15),
+        0 0 20px rgba(168, 85, 247, 0.25);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   VALID INPUT
+   ========================================= */
+
+input:valid {
+
+    border-color: rgba(192, 132, 252, 0.30);
+}
+
+
+/* =========================================
+   INVALID INPUT
+   ========================================= */
+
+input:invalid:not(:placeholder-shown) {
+
+    border-color: rgba(248, 113, 113, 0.7);
+
+    box-shadow:
+        0 0 10px rgba(248, 113, 113, 0.15);
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+   ========================================= */
+
+form button {
+
+    width: 100%;
+
+    margin-top: 5px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #9333ea
+        );
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 22px rgba(124, 58, 237, 0.35);
+
+    transition: all 0.35s ease;
+}
+
+
+/* Submit Hover */
+
+form button:hover {
+
+    transform: translateY(-4px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #8b5cf6,
+            #a855f7
+        );
+
+    box-shadow:
+        0 12px 30px rgba(168, 85, 247, 0.55),
+        0 0 20px rgba(168, 85, 247, 0.30);
+}
+
+
+/* Submit Click */
+
+form button:active {
+
+    transform: scale(0.97);
+}
+
+
+/* =========================================
+   BACK TO HOME BUTTON
+   ========================================= */
+
+.container > button {
+
+    width: 100%;
+
+    padding: 13px 20px;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+
+    transition: all 0.35s ease;
+}
+
+
+.container > button:hover {
+
+    background: rgba(255, 255, 255, 0.18);
+
+    transform: translateY(-4px);
+
+    border-color: rgba(255, 255, 255, 0.5);
+
+    box-shadow:
+        0 8px 25px rgba(168, 85, 247, 0.35),
+        0 0 15px rgba(168, 85, 247, 0.25);
+}
+
+
+.container > button:active {
+
+    transform: scale(0.97);
+}
+
+
+/* =========================================
+   INPUT ICON EFFECTS
+   ========================================= */
+
+/* Student ID */
+
+#student_id {
+
+    background-image:
+        linear-gradient(
+            transparent,
+            transparent
+        );
+
+    padding-left: 17px;
+}
+
+
+/* =========================================
+   FORM SPACING
+   ========================================= */
+
+form br + br {
+
+    display: none;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 25px 15px;
+    }
+
+    .container {
+
+        padding: 30px 22px;
+
+        border-radius: 24px;
+    }
+
+    header img {
+
+        width: 95px;
+        height: 95px;
+    }
+
+    header h2 {
+
+        font-size: 24px;
+    }
+
+    input {
+
+        padding: 13px 14px;
+    }
+
+    form button {
+
+        padding: 14px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL SCREENS
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    .container {
+
+        padding: 25px 17px;
+    }
+
+    header h2 {
+
+        font-size: 21px;
+    }
+
+    header img {
+
+        width: 85px;
+        height: 85px;
+    }
+}

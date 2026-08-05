@@ -1,0 +1,687 @@
+
+/* =========================================
+   STUDENTHUB - RESULTS PAGE
+   PREMIUM PURPLE / GLASSMORPHISM DESIGN
+   ========================================= */
+
+
+/* =========================================
+   BASIC RESET
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+   ========================================= */
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(139, 92, 246, 0.32),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 85%,
+            rgba(99, 102, 241, 0.32),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #0f0725,
+            #24104f,
+            #3b176d
+        );
+
+    color: white;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   ANIMATED BACKGROUND CIRCLES
+   ========================================= */
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    background: rgba(168, 85, 247, 0.15);
+
+    top: -100px;
+    left: -80px;
+
+    filter: blur(10px);
+
+    animation: floatingGlow 8s ease-in-out infinite;
+
+    z-index: -1;
+}
+
+
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background: rgba(79, 70, 229, 0.15);
+
+    right: -120px;
+    bottom: -120px;
+
+    filter: blur(10px);
+
+    animation: floatingGlow 10s ease-in-out infinite reverse;
+
+    z-index: -1;
+}
+
+
+@keyframes floatingGlow {
+
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(35px, 30px) scale(1.12);
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+    padding-top: 35px;
+
+    text-align: center;
+
+    animation: headerAppear 1s ease forwards;
+}
+
+
+@keyframes headerAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   STUDENT PROFILE IMAGE
+   ========================================= */
+
+header img {
+
+    width: 115px;
+    height: 115px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid white;
+
+    padding: 5px;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    box-shadow:
+        0 0 20px rgba(168, 85, 247, 0.7),
+        0 0 45px rgba(124, 58, 237, 0.4);
+
+    animation: imageFloat 4s ease-in-out infinite;
+
+    transition: 0.4s;
+}
+
+
+header img:hover {
+
+    transform: scale(1.1) rotate(5deg);
+
+    box-shadow:
+        0 0 30px rgba(255, 255, 255, 0.8),
+        0 0 60px rgba(168, 85, 247, 0.8);
+}
+
+
+@keyframes imageFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   MAIN
+   ========================================= */
+
+main {
+
+    width: 100%;
+
+    padding: 25px 20px 50px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* =========================================
+   RESULTS CARD
+   ========================================= */
+
+section {
+
+    width: 100%;
+
+    max-width: 950px;
+
+    padding: 40px;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.15),
+            rgba(255, 255, 255, 0.06)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.20);
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+
+    position: relative;
+
+    overflow: hidden;
+
+    animation: cardAppear 1s ease 0.2s both;
+}
+
+
+@keyframes cardAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(35px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+
+/* =========================================
+   GLOWING TOP LINE
+   ========================================= */
+
+section::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #6366f1,
+            #8b5cf6,
+            #c084fc,
+            #6366f1
+        );
+
+    box-shadow:
+        0 0 20px rgba(168, 85, 247, 0.7);
+}
+
+
+/* =========================================
+   RESULTS HEADING
+   ========================================= */
+
+section h2 {
+
+    text-align: center;
+
+    font-size: 34px;
+
+    font-weight: 800;
+
+    color: white;
+
+    margin-bottom: 30px;
+
+    text-shadow:
+        0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================
+   TABLE
+   ========================================= */
+
+section table {
+
+    width: 100%;
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================================
+   TABLE CAPTION
+   ========================================= */
+
+section table caption {
+
+    caption-side: top;
+
+    padding: 15px;
+
+    color: #ddd6fe;
+
+    font-size: 16px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   TABLE HEADER
+   ========================================= */
+
+section table thead {
+
+    background:
+        linear-gradient(
+            135deg,
+            #6d28d9,
+            #7c3aed
+        );
+}
+
+
+section table th {
+
+    padding: 18px 20px;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================================
+   TABLE DATA
+   ========================================= */
+
+section table td {
+
+    padding: 17px 20px;
+
+    color: #e2e8f0;
+
+    font-size: 15px;
+
+    text-align: left;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+    transition: all 0.3s ease;
+}
+
+
+/* =========================================
+   TABLE ROW HOVER
+   ========================================= */
+
+section table tbody tr {
+
+    transition: all 0.3s ease;
+}
+
+
+section table tbody tr:hover {
+
+    background: rgba(168, 85, 247, 0.16);
+
+    transform: scale(1.01);
+
+    box-shadow:
+        0 0 20px rgba(168, 85, 247, 0.12);
+}
+
+
+section table tbody tr:hover td {
+
+    color: white;
+}
+
+
+/* Remove border from last row */
+
+section table tbody tr:last-child td {
+
+    border-bottom: none;
+}
+
+
+/* =========================================
+   PERCENTAGE COLUMN
+   ========================================= */
+
+section table td:last-child {
+
+    text-align: center;
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    color: #d8b4fe;
+
+    text-shadow:
+        0 0 10px rgba(216, 180, 254, 0.25);
+}
+
+
+/* =========================================
+   RESULT INFO
+   ========================================= */
+
+.result-info {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+}
+
+
+/* Remove default paragraph spacing */
+
+.result-info p {
+
+    margin: 0;
+}
+
+
+/* =========================================
+   VIEW COURSES BUTTON
+   ========================================= */
+
+.result-info a {
+
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #9333ea
+        );
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    box-shadow:
+        0 8px 20px rgba(124, 58, 237, 0.30);
+
+    transition: all 0.35s ease;
+}
+
+
+.result-info a:hover {
+
+    transform: translateY(-5px) scale(1.04);
+
+    box-shadow:
+        0 12px 30px rgba(168, 85, 247, 0.50),
+        0 0 20px rgba(168, 85, 247, 0.25);
+}
+
+
+/* =========================================
+   BACK TO HOME BUTTON
+   ========================================= */
+
+.result-info button {
+
+    padding: 13px 25px;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    background: rgba(255, 255, 255, 0.10);
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+
+    transition: all 0.35s ease;
+}
+
+
+.result-info button:hover {
+
+    background: rgba(255, 255, 255, 0.20);
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 25px rgba(168, 85, 247, 0.35),
+        0 0 15px rgba(168, 85, 247, 0.25);
+}
+
+
+.result-info button:active {
+
+    transform: scale(0.96);
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding-top: 25px;
+    }
+
+    header img {
+        width: 95px;
+        height: 95px;
+    }
+
+    main {
+        padding: 20px 12px 40px;
+    }
+
+    section {
+        padding: 28px 15px;
+
+        border-radius: 22px;
+    }
+
+    section h2 {
+        font-size: 27px;
+    }
+
+    section table th,
+    section table td {
+        padding: 13px 8px;
+    }
+
+    section table th {
+        font-size: 13px;
+    }
+
+    section table td {
+        font-size: 13px;
+    }
+
+    section table td:last-child {
+        font-size: 15px;
+    }
+
+    .result-info {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .result-info a,
+    .result-info button {
+        width: 220px;
+
+        text-align: center;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL SCREEN
+   ========================================= */
+
+@media (max-width: 450px) {
+
+    section {
+        padding: 22px 8px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    section table th,
+    section table td {
+        padding: 10px 5px;
+    }
+
+    section table th {
+        font-size: 11px;
+    }
+
+    section table td {
+        font-size: 11px;
+    }
+
+    section table td:last-child {
+        font-size: 13px;
+    }
+
+    .result-info a,
+    .result-info button {
+        width: 190px;
+    }
+}
