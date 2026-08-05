@@ -1,0 +1,336 @@
+<mxfile host="Electron" agent="Claude" pages="11">
+  <diagram name="1. Sitemap" id="1.-sitemap">
+    <mxGraphModel dx="1212" dy="793" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c101" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;fontColor=#333333;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" value="HOME" vertex="1">
+          <mxGeometry height="70" width="200" x="700" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c102" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#666666;fontColor=#333333;fontSize=13;align=center;verticalAlign=middle;dashed=0;spacing=6;" value="Login" vertex="1">
+          <mxGeometry height="60" width="160" x="380" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="c103" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#666666;fontColor=#333333;fontSize=13;align=center;verticalAlign=middle;dashed=0;spacing=6;" value="Announcements" vertex="1">
+          <mxGeometry height="60" width="180" x="560" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="c104" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#666666;fontColor=#333333;fontSize=13;align=center;verticalAlign=middle;dashed=0;spacing=6;" value="Contact Us" vertex="1">
+          <mxGeometry height="60" width="180" x="760" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="c105" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#666666;fontColor=#333333;fontSize=13;align=center;verticalAlign=middle;dashed=0;spacing=6;" value="Calendar" vertex="1">
+          <mxGeometry height="60" width="180" x="960" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="c106" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#666666;fontColor=#333333;fontSize=13;align=center;verticalAlign=middle;dashed=0;spacing=6;" value="Courses" vertex="1">
+          <mxGeometry height="60" width="180" x="1160" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="c107" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#666666;fontColor=#333333;fontSize=13;align=center;verticalAlign=middle;dashed=0;spacing=6;" value="Sign Up" vertex="1">
+          <mxGeometry height="60" width="160" x="380" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="c108" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#666666;fontColor=#333333;fontSize=13;align=center;verticalAlign=middle;dashed=0;spacing=6;" value="Results" vertex="1">
+          <mxGeometry height="60" width="180" x="1160" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="c109" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#666666;fontColor=#333333;fontSize=13;align=center;verticalAlign=middle;dashed=0;spacing=6;" value="Assignments" vertex="1">
+          <mxGeometry height="60" width="180" x="960" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="c110" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#666666;fontColor=#333333;fontSize=13;align=center;verticalAlign=middle;dashed=0;spacing=6;" value="Forgot Password (linked, file missing)" vertex="1">
+          <mxGeometry height="60" width="180" x="200" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="c111" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#666666;fontColor=#333333;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" value="Profile (via avatar / after login)" vertex="1">
+          <mxGeometry height="70" width="200" x="700" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="c112" edge="1" parent="1" source="c101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;strokeColor=#666666;dashed=0;" target="c102" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c113" edge="1" parent="1" source="c101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;strokeColor=#666666;dashed=0;" target="c103" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c114" edge="1" parent="1" source="c101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;strokeColor=#666666;dashed=0;" target="c104" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c115" edge="1" parent="1" source="c101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;strokeColor=#666666;dashed=0;" target="c105" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c116" edge="1" parent="1" source="c101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;strokeColor=#666666;dashed=0;" target="c106" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c117" edge="1" parent="1" source="c101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;strokeColor=#666666;dashed=0;" target="c111" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c118" edge="1" parent="1" source="c102" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;strokeColor=#666666;dashed=0;" target="c107" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c119" edge="1" parent="1" source="c102" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;strokeColor=#666666;dashed=1;" target="c110" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c120" edge="1" parent="1" source="c106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;strokeColor=#666666;dashed=0;" target="c108" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c121" edge="1" parent="1" source="c101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;elbow=vertical;strokeColor=#666666;dashed=0;" target="c109" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="2. Home" id="2.-home">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c123" value="HEADER StudentHub Portal (avatar image links to Profile)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#666666;fontColor=#333333;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="820" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="c124" value="NAV BAR:  Login | Announcements | Contact Us | Calendar | Courses | Sign Up | Results | Assignments" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=9;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="130" width="820" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c125" value="HOME PAGE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#666666;fontColor=#333333;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="180" width="820" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c126" value="About StudentHub (intro paragraph - platform description)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="226" width="820" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="c127" value="Mission Statement (paragraph - empowering students)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="318" width="820" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c128" value="Closing Statement (paragraph - join the community)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="400" width="820" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="3. Login" id="3.-login">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c129" value="HEADER StudentHub" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#666666;fontColor=#333333;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="820" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c130" value="StudentHub Portal" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#666666;fontColor=#333333;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="260" y="120" width="340" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c131" value="[ Field ]  Username / Email  [ Field ]  Password  Forgot Password? (link)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="260" y="180" width="340" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="c132" value="[ Log In ]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;fontColor=#333333;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="260" y="380" width="160" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c133" value="[ Back to Home ]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=12;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="440" y="380" width="220" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c134" value="New here? -&gt; Sign Up link" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="260" y="440" width="340" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="4. Sign Up" id="4.-sign-up">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c135" value="HEADER StudentHub Portal - Sign Up" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#666666;fontColor=#333333;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="820" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c136" value="[ Field ]  Full Name  [ Field ]  Email  [ Field ]  Password  [ Field ]  Confirm Password  [ Field ]  Course" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="220" y="120" width="420" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="c137" value="[ Submit ] (redirects to Home)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;fontColor=#333333;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="220" y="400" width="200" height="44" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="5. Profile" id="5.-profile">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c138" value="HEADER StudentHub Portal (avatar image links to Profile)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#666666;fontColor=#333333;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="820" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="c139" value="PROFILE" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#666666;fontColor=#333333;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="130" width="820" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c140" value="Enrolled Students by Course (table: Course | Enrolled Count, etc.)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="176" width="820" height="130" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="6. Announcements" id="6.-announcements">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c141" value="HEADER StudentHub Portal (avatar image links to Profile)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#666666;fontColor=#333333;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="820" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="c142" value="ANNOUNCEMENTS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#666666;fontColor=#333333;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="130" width="820" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c143" value="Final Exam Schedule Released - notice card" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="176" width="820" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c144" value="Winter Break Begins - notice card" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="248" width="820" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c145" value="Important: Fee Submission Deadline - notice card" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="320" width="820" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c146" value="Library Extended Hours - notice card" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="392" width="820" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c147" value="New Course Registration Open - notice card" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="464" width="820" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c148" value="[ Back to Home ]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="536" width="820" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c149" value="FOOTER" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=10;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="592" width="820" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="7. Assignments" id="7.-assignments">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c150" value="HEADER StudentHub Portal (avatar image links to Profile)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#666666;fontColor=#333333;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="820" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="c151" value="ASSIGNMENTS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#666666;fontColor=#333333;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="130" width="820" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c152" value="B.Tech Computer Engineering (table: Assignment | Due Date | Status)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="176" width="820" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="c153" value="B.Tech Civil Engineering (table)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="278" width="820" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="c154" value="B.Tech Mechanical Engineering (table)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="380" width="820" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="c155" value="B.Tech Electrical Engineering (table)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="482" width="820" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="c156" value="MBA (table)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="584" width="820" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="c157" value="MCA (table)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="686" width="820" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="c158" value="[ Back to Home ]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="788" width="820" height="44" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="8. Calendar" id="8.-calendar">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c159" value="HEADER StudentHub Portal (avatar image links to Profile)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#666666;fontColor=#333333;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="820" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="c160" value="ACADEMIC CALENDAR" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#666666;fontColor=#333333;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="130" width="820" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c161" value="CHARUSAT Academic Holiday Calendar (table: Date | Occasion)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="176" width="820" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="c162" value="College Exam Schedule (table: Exam | Date | Time)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="318" width="820" height="130" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="9. Contact" id="9.-contact">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c163" value="HEADER Welcome to StudentHub Portal" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#666666;fontColor=#333333;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="820" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c164" value="Contact Us" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#666666;fontColor=#333333;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="220" y="110" width="420" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c165" value="[ Field ]  Name  [ Field ]  Email  [ Field ]  Message (textarea)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="220" y="160" width="420" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="c166" value="[ Send Message ]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#666666;fontColor=#333333;fontSize=12;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="220" y="350" width="200" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c167" value="Get in Touch (address / phone / email)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="220" y="410" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="c168" value="Follow Us (social icons)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="440" y="410" width="200" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="10. Courses" id="10.-courses">
+    <mxGraphModel dx="1400" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c169" value="HEADER StudentHub Portal (avatar image links to Profile)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#666666;fontColor=#333333;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="820" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="c170" value="COURSES" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#666666;fontColor=#333333;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="130" width="820" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="c171" value="Courses (section heading)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="176" width="820" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c172" value="B.Tech Computer Engineering - card" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="232" width="820" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c173" value="B.Tech Civil Engineering - card" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="288" width="820" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c174" value="B.Tech Mechanical Engineering - card" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="344" width="820" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c175" value="B.Tech Electrical Engineering - card" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="400" width="820" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c176" value="MBA - card" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="456" width="820" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c177" value="MCA - card" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="512" width="820" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c178" value="[ Back to Home ]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="568" width="820" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="c179" value="FOOTER" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;fontSize=10;align=center;verticalAlign=middle;dashed=0;spacing=6;" vertex="1" parent="1">
+          <mxGeometry x="20" y="624" width="820" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="11. Results" id="11.-results">
+    <mxGraphModel dx="1030" dy="674" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c180" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#666666;fontColor=#333333;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" value="HEADER StudentHub Portal (avatar image links to Profile)" vertex="1">
+          <mxGeometry height="100" width="820" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="c181" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#666666;fontColor=#333333;fontSize=13;fontStyle=1;align=center;verticalAlign=middle;dashed=0;spacing=6;" value="RESULTS" vertex="1">
+          <mxGeometry height="36" width="820" x="20" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="c182" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" value="Results (table: Subject | Marks | Grade)" vertex="1">
+          <mxGeometry height="140" width="820" x="20" y="176" as="geometry" />
+        </mxCell>
+        <mxCell id="c183" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#666666;fontColor=#333333;fontSize=11;align=center;verticalAlign=middle;dashed=0;spacing=6;" value="[ Back to Home ]" vertex="1">
+          <mxGeometry height="44" width="820" x="20" y="328" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
