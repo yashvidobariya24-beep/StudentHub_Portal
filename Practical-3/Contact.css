@@ -1,0 +1,149 @@
+/* Base Page Reset & Centering Layout */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Container Card */
+div[style*="text-align:center"] {
+    background-color: #ffffff;
+    max-width: 600px;
+    width: 100%;
+    padding: 40px 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Header & Avatar Styling */
+header {
+    margin-bottom: 20px;
+}
+
+header img {
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+header img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
+h3 {
+    color: #007bff;
+    font-size: 1.3rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h4 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-top: 1px solid #e9ecef;
+    padding-top: 20px;
+}
+
+p {
+    color: #6c757d;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Form Controls */
+form {
+    text-align: left;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #495057;
+    margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+/* Action Buttons */
+button {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Primary Submit Button */
+form button[type="submit"] {
+    width: 100%;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    margin-top: 10px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Secondary Back Button */
+main > button {
+    width: 100%;
+    background-color: transparent;
+    color: #6c757d;
+    border: 1px solid #ced4da;
+    margin-top: 15px;
+}
+
+main > button:hover {
+    background-color: #e9ecef;
+    color: #343a40;
+}

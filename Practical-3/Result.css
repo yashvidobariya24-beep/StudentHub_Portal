@@ -1,0 +1,119 @@
+/* General Layout & Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Header & Images */
+header, div[style*="text-align: center"] {
+    margin-bottom: 20px;
+}
+
+img[alt="Student"] {
+    border-radius: 50%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 3px solid #007bff;
+}
+
+img[alt="Student"]:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Headings */
+h2 {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    overflow: hidden;
+    border-radius: 8px;
+    border: none; /* Replaces legacy border="1" */
+}
+
+caption {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+thead {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th:last-child, td:last-child {
+    text-align: center;
+    font-weight: bold;
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* Action Controls & Buttons */
+.result-info {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.result-info a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.result-info a:hover {
+    text-decoration: underline;
+}
+
+button[type="submit"] {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #5a6268;
+}

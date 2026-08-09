@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f7ff;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #1565c0;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Main Content */
+main {
+    min-height: calc(100vh - 90px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 20px;
+}
+
+/* Content Box */
+section {
+    width: 850px;
+    background: white;
+    padding: 30px 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+    text-align: center;
+}
+
+/* Heading */
+section h2 {
+    margin: 0 0 10px;
+    color: #1565c0;
+    font-size: 26px;
+}
+
+/* Description */
+section > p {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 22px;
+}
+
+/* Table */
+#enrollment-table {
+    width: 90%;
+    margin: 0 auto 20px;
+    border-collapse: collapse;
+    border: none;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Caption */
+#enrollment-table caption {
+    caption-side: top;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1565c0;
+    padding: 10px;
+}
+
+/* Table Header */
+#enrollment-table th {
+    background: #1565c0;
+    color: white;
+    padding: 14px;
+    font-size: 15px;
+}
+
+/* Table Cells */
+#enrollment-table td {
+    padding: 13px;
+    border-bottom: 1px solid #e0e6ef;
+    font-size: 14px;
+}
+
+/* Alternate rows */
+#enrollment-table tbody tr:nth-child(even) {
+    background: #f5f9ff;
+}
+
+/* Hover effect */
+#enrollment-table tbody tr:hover {
+    background: #e8f1ff;
+    transition: 0.2s;
+}
+
+/* Back to Home */
+section p:last-child {
+    margin-top: 25px;
+}
+
+section p:last-child a {
+    display: inline-block;
+    padding: 9px 20px;
+    background: white;
+    color: #1565c0;
+    border: 1px solid #1565c0;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+section p:last-child a:hover {
+    background: #1565c0;
+    color: white;
+}
