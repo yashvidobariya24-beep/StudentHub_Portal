@@ -1,77 +1,153 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body */
+
+
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-   
+    background: #f5f5f5;
     color: #333;
-    
 }
 
-/* Heading */
-header{
-  background:#47dbf2;
-  font-size: 25px;
-}
-h1 {
-    background:#47dbf2;
 
-    margin-top: 10px;
+
+
+header {
+    padding: 25px 20px;
+    background: #123B5D;
+    text-align: center;
+    padding: 25px;
+    border-bottom: 4px solid #123B5D;
 }
 
-h3 {
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    min-height: 160px;
+}
+
+
+
+
+.header-content img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    background: white;
+    padding: 8px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    position: absolute;
+    left: 30px;
+}
+
+
+
+
+.header-text {
+    text-align: center;
+}
+
+.header-text h1 {
+    color: black;
+    font-size: 45px;
+    margin-bottom: 8px;
+}
+
+.header-text h3 {
+    color: #0b3d91;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.header-text p {
     color: #555;
-     background:#47dbf2;
-    margin: 10px 0;
+    font-size: 17px;
 }
 
-/* Login Link */
+
+
+
 a {
     text-decoration: none;
-    color: #0066cc;
+    color: #0d6efd;
     font-weight: bold;
 }
 
 a:hover {
-    color: red;
+    color: #084298;
     text-decoration: underline;
 }
 
-/* Form */
+
+
+
 form {
-    width: 600px;
+    width: 650px;
+    max-width: 90%;
     margin: 30px auto;
-    background: #ffffff;
-    padding: 25px;
+
+    background: white;
+
+    padding: 30px;
+
     border-radius: 12px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+
+    border-left: 6px solid #123B5D;
 }
 
-/* Registration Title */
-form p {
-    font-size: 30px;
+
+
+
+form h2 {
+    text-align: center;
+
     color: #0b3d91;
-    margin-bottom: 20px;
+
+    font-size: 30px;
+
+    margin-bottom: 25px;
+
+    border-bottom: 2px solid #ddd;
+
+    padding-bottom: 15px;
 }
 
-/* Table */
+
+
+
 table {
     width: 100%;
-    border-spacing: 15px;
+
+    border-spacing: 0 15px;
 }
 
-/* Labels */
+
+
+td {
+    padding: 8px;
+    vertical-align: middle;
+}
+
+
+
+
 td:first-child {
-    font-weight: bold;
     width: 35%;
+    font-weight: bold;
 }
 
-/* Inputs */
+
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -79,104 +155,168 @@ input[type="password"],
 input[type="date"],
 select,
 textarea {
+
     width: 100%;
-    padding: 10px;
+
+    padding: 11px;
+
     border: 1px solid #aaa;
+
     border-radius: 6px;
+
+    font-size: 15px;
+
+    background: white;
+
+    outline: none;
+
+}
+
+
+
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+
+    border-color: #0d6efd;
+
+    box-shadow: 0 0 5px rgba(13, 110, 253, 0.3);
+
+}
+
+
+
+
+textarea {
+    resize: vertical;
+}
+
+
+
+input[type="radio"],
+input[type="checkbox"] {
+
+    margin-right: 5px;
+    margin-left: 5px;
+
+}
+
+
+
+td label {
     font-size: 15px;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-    border-color: #2196F3;
-    outline: none;
-    box-shadow: 0 0 5px #2196F3;
+
+
+.terms {
+    text-align: center;
+
+    padding-top: 15px;
 }
 
-/* Radio & Checkbox */
-input[type="radio"],
-input[type="checkbox"] {
-    margin-right: 5px;
-    margin-left: 10px;
+.terms label {
+    font-weight: normal;
 }
 
-/* Buttons */
+
+
+.buttons {
+    text-align: center;
+    padding-top: 15px;
+}
+
+
+
 button {
-    padding: 10px 25px;
-    margin: 10px;
+
+    padding: 11px 30px;
+
+    margin: 5px 8px;
+
     border: none;
+
     border-radius: 6px;
+
     font-size: 16px;
+
+    font-weight: bold;
+
     cursor: pointer;
+
     transition: 0.3s;
+
 }
 
-/* Register Button */
+
+
 button[type="submit"] {
-    background-color: #28a745;
+
+    background: #28a745;
+
     color: white;
+
 }
+
 
 button[type="submit"]:hover {
-    background-color: #218838;
+
+    background: #218838;
+
+    transform: translateY(-2px);
+
 }
 
-/* Clear Button */
+
+
 button[type="reset"] {
-    background-color: #dc3545;
+
+    background: #dc3545;
+
     color: white;
+
 }
+
 
 button[type="reset"]:hover {
-    background-color: #c82333;
+
+    background: #c82333;
+
+    transform: translateY(-2px);
+
 }
 
-/* Horizontal Line */
+
+
 hr {
+
+    border: none;
+
+    height: 2px;
+
+    background: #ddd;
+
     margin: 25px 0;
+
 }
 
-/* Footer */
-small {
-    color: #222;
+
+
+footer {
+
+    background: #123B5D;
+
+    text-align: center;
+
+    padding: 10px;
+
+    color: #555;
+
     font-size: 14px;
-}
 
-/* Logo */
-img {
-    width:200px;
-    height:70px;
-    border-radius:10px;
-    background:white;
-    padding:8px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.2);
-}
-
-/* Responsive */
-@media (max-width: 650px) {
-    form {
-        width: 95%;
-        padding: 15px;
-    }
-
-    table,
-    tr,
-    td {
-        display: block;
-        width: 100%;
-    }
-
-    td {
-        margin-bottom: 10px;
-    }
-
-    td:first-child {
-        margin-top: 10px;
-    }
-
-    button {
-        width: 100%;
-        margin: 8px 0;
-    }
 }
