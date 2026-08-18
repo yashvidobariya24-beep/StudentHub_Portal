@@ -7,13 +7,13 @@
 
     <title>StudentHub Login</title>
 
-    
+
     <link rel="stylesheet" href="../Practical-3/login.css">
 </head>
 
 <body>
 
-    
+
 
     <header>
 
@@ -40,15 +40,15 @@
     </header>
 
 
-    
 
-    <form action="dashboard.html">
+
+    <form id="loginForm">
 
         <h2>Login</h2>
 
         <table>
 
-          
+
 
             <tr>
 
@@ -57,10 +57,7 @@
                 </td>
 
                 <td>
-                    <input type="email"
-                           id="email"
-                           placeholder="Enter Your Email"
-                           required>
+                    <input type="email" id="email" placeholder="Enter Your Email" required>
                 </td>
 
             </tr>
@@ -74,10 +71,7 @@
                 </td>
 
                 <td>
-                    <input type="password"
-                           id="password"
-                           placeholder="Enter Your Password"
-                           required>
+                    <input type="password" id="password" placeholder="Enter Your Password" required>
                 </td>
 
             </tr>
@@ -95,14 +89,13 @@
             </tr>
 
 
-         
+
 
             <tr>
 
                 <td colspan="2" class="remember">
 
-                    <input type="checkbox"
-                           id="remember">
+                    <input type="checkbox" id="remember">
 
                     <label for="remember">
                         Remember Me
@@ -118,7 +111,7 @@
 
                 <td colspan="2" class="buttons">
 
-                    <button type="submit">
+                    <button id="loginBtn" type="submit">
                         Login
                     </button>
 
@@ -135,7 +128,7 @@
     </form>
 
 
-    
+
 
     <div class="bottom">
 
@@ -154,6 +147,7 @@
 
     </div>
 
+    <script src="../Practical-4/login.js"></script>
 </body>
 
 </html>

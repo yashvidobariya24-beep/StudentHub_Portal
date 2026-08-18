@@ -186,9 +186,6 @@ marquee{
     font-size:18px;
 }
 
-
-
-
 .cards{
     display:grid;
     grid-template-columns:repeat(4,minmax(240px,1fr));
@@ -311,36 +308,37 @@ footer{
 
 
 
+#successPopup {
+    display: none;
 
-@media(max-width:900px){
+    position: fixed;
 
-    .cards{
-        grid-template-columns:repeat(2,1fr);
-    }
+    top: 30px;
+    left: 50%;
 
-    .dashboard-content{
-        grid-template-columns:1fr;
-    }
+    transform: translate(-50%);
 
+    background-color: white;
+
+    width: 350px;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+
+    z-index: 9999;
 }
 
+#successPopup h2 {
+    margin-bottom: 15px;
+}
 
-@media(max-width:600px){
+#successPopup p {
+    margin: 0;
 
-    .cards{
-        grid-template-columns:1fr;
-    }
-
-    .navbar ul{
-        gap:15px;
-    }
-
-    .navbar a{
-        font-size:16px;
-    }
-
-    .search input{
-        width:100%;
-    }
-
+    font-size: 18px;
 }
