@@ -320,3 +320,102 @@ footer {
     font-size: 14px;
 
 }
+
+
+.popup {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 9999;
+}
+
+
+.popup-content {
+    background: white;
+
+    width: 420px;
+    max-width: 90%;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+
+    position: relative;
+}
+
+
+.popup-content h2 {
+    color: #dc3545;
+
+    margin-bottom: 15px;
+}
+
+
+.popup-content p {
+    color: #333;
+
+    margin-bottom: 20px;
+
+    line-height: 1.5;
+}
+
+
+#popupOk {
+    background: #123B5D;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 30px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+
+#popupOk:hover {
+    background: #0d2b43;
+}
+
+
+.close {
+    position: absolute;
+
+    right: 12px;
+    top: 8px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    color: #555;
+}
+
+
+.close:hover {
+    color: red;
+}

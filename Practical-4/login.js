@@ -12,7 +12,7 @@ loginForm.addEventListener("submit", function (event) {
     const emailregex = /^[0-9]{2}d[a-zA-Z]{2}[0-9]{3}@charusat\.edu\.in$/;
 
    
-    const passwordregex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    const passwordregex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
 
     if (!emailregex.test(email)) {

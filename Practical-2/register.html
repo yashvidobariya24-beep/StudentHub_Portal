@@ -45,7 +45,7 @@
 
 
 
-<form action="login.html" method="GET">
+<form id="registerForm" action="login.html" method="GET">
 
     <input type="hidden" name="registered" value="success">
 
@@ -338,7 +338,31 @@
 
 </form>
 
+</form>
 
+
+
+
+<div id="validationPopup" class="popup">
+
+    <div class="popup-content">
+
+        <button id="closePopup" class="close">&times;</button>
+
+        <h2 id="popupTitle">Validation Error</h2>
+
+        <p id="popupMessage"></p>
+
+        <button id="popupOk">OK</button>
+
+    </div>
+
+</div>
+
+
+<hr>
+
+<footer>
 
 
 <hr>
@@ -353,6 +377,7 @@
 
 </footer>
 
+<script src="../Practical-4/register.js"></script>
 
 </body>
 

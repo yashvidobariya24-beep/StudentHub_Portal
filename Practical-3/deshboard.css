@@ -342,3 +342,153 @@ footer{
 
     font-size: 18px;
 }
+
+
+#themeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    padding: 10px 16px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #123B5D;
+    color: white;
+
+    cursor: pointer;
+    font-size: 16px;
+
+    z-index: 9999;
+}
+
+#themeToggle:hover {
+    background: #0d2b43;
+}
+
+
+
+body.dark-mode {
+    background: #121212;
+    color: #eeeeee;
+}
+
+
+body.dark-mode header {
+    background: #1e1e1e;
+    border-bottom-color: #1e1e1e;
+}
+
+body.dark-mode .header-text h1{
+    color: #eeeeee;
+}
+
+
+body.dark-mode nav {
+    background: #000000;
+}
+
+
+
+body.dark-mode marquee {
+    background: #333333;
+    color: white;
+}
+
+
+
+body.dark-mode .main {
+    background: #1e1e1e;
+    color: #eeeeee;
+}
+
+
+
+body.dark-mode .search input {
+    background: #2a2a2a;
+    color: white;
+    border-color: #555555;
+}
+
+
+
+body.dark-mode .welcome p {
+    color: #cccccc;
+}
+
+
+
+body.dark-mode .card {
+    background: #2a2a2a;
+    color: white;
+}
+
+
+
+body.dark-mode .card p {
+    color: #cccccc;
+}
+
+
+
+body.dark-mode .box {
+    background: #2a2a2a;
+    color: white;
+    border-color: #444444;
+}
+
+
+
+body.dark-mode .box h2,
+body.dark-mode .activity h2 {
+    color: white;
+}
+
+
+
+
+body.dark-mode .box a {
+    color: #7da2ff;
+}
+
+body.dark-mode .box a:hover {
+    color: #FFD54F;
+}
+
+
+
+body.dark-mode nav a {
+    color: #7da2ff;
+}
+
+body.dark-mode nav a:hover {
+    color: #FFD54F;
+}
+
+
+body.dark-mode .activity {
+    background: #2a2a2a;
+    color: white;
+    border-color: #444444;
+}
+
+
+
+body.dark-mode .box a,
+body.dark-mode .box ul li,
+body.dark-mode .activity ul li {
+    border-color: #444444;
+}
+
+
+
+body.dark-mode footer {
+    color: #cccccc;
+}
+
+
+body.dark-mode #themeToggle {
+    background: #eeeeee;
+    color: #111111;
+}
