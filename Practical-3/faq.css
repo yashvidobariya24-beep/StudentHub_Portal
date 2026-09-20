@@ -127,7 +127,7 @@ main > h2{
 
 
 
-article{
+.faq{
 
     background:white;
 
@@ -145,24 +145,39 @@ article{
 
 
 
-article h3{
-
+.question{
     color:#222;
-
     font-size:22px;
-
     margin-bottom:12px;
+    cursor:pointer;
+
+    
+    background:none;
+    border:none;
+
+    
+    text-align:left;
+
+    
+    width:100%;
+
+    
+    padding:5px;
+
+    font-weight:bold;
 }
 
 
 
-article p{
+.answer{
 
     color:#333;
 
     font-size:20px;
 
     line-height:1.6;
+
+    display: none;
 }
 
 
