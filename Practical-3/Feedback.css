@@ -1,0 +1,299 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+body {
+    background: #b8dddd;
+    color: #064f4b;
+    line-height: 1.6;
+}
+
+header {
+    background: #03413d;
+    padding: 35px 5% 20px;
+    box-shadow: 0 4px 15px rgba(3, 65, 61, 0.25);
+}
+
+header img {
+    width: 130px;
+    height: auto;
+    border-radius: 20px;
+    background: white;
+    padding: 8px;
+}
+
+header h1 {
+    color: #e8f4f3;
+    font-size: 38px;
+    font-family: cursive;
+    letter-spacing: 3px;
+    margin: 10px 0 5px;
+}
+header p {
+    color: #c9e8e6;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+nav {
+    background: #075f59;
+    padding: 14px 10px;
+    margin-top: 25px;
+    border-top: 1px solid #4aa9a5;
+}
+
+nav center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+nav a {
+    color: #e8f4f3;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 9px 20px;
+    background: transparent;
+    border: 1px solid #4aa9a5;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+
+nav a:hover {
+    background: #c9e8e6;
+    color: #064f4b;
+   
+}
+
+marquee {
+    background: #c9e8e6;
+    color: #064f4b;
+    padding: 9px 0;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-top: 16px;
+    border-bottom: 4px solid #4aa9a5;
+}
+
+main {
+    width: 85%;
+    max-width: 900px;
+    margin: 35px auto;
+}
+
+section {
+    background: #ffffff;
+    width: 100%;
+    padding: 35px;
+    border-radius: 16px;
+    border-top: 5px solid #4aa9a5;
+}
+
+h2 {
+    color: #064f4b;
+    font-size: 28px;
+    margin-bottom: 12px;
+    display: inline-block;
+    border-bottom: 3px solid #4aa9a5;
+    padding-bottom: 5px;
+}
+
+
+section > center > p {
+    color: #52706d;
+    margin-bottom: 25px;
+}
+
+
+
+.form-group-title {
+    color: #087f78;
+    font-size: 21px;
+    font-weight: 700;
+    border-bottom: 2px solid #b8dddd;
+    padding-bottom: 7px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+
+
+form p {
+    margin: 18px 0;
+    text-align: left;
+}
+
+
+
+label {
+    font-weight: 600;
+    color: #285f5b;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    margin-top: 8px;
+    padding: 11px 14px;
+    border: 1px solid #9ccdcc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f5fbfa;
+    color: #064f4b;
+    transition: all 0.3s ease;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #087f78;
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 169, 165, 0.18);
+}
+
+
+
+.rating-box,
+.checkbox-group {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #087f78;
+    margin-right: 6px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+
+.rating-box label {
+    margin-right: 18px;
+    font-weight: 500;
+    color: #064f4b;
+}
+
+
+textarea {
+    resize: vertical;
+}
+
+
+button {
+    padding: 11px 28px;
+    margin: 10px 8px 10px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+
+button[type="submit"] {
+    background-color: #087f78;
+    color: #ffffff;
+}
+
+button[type="submit"]:hover {
+    background-color: #064f4b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(8, 127, 120, 0.3);
+}
+
+button[type="reset"] {
+    background-color: #c9e8e6;
+    color: #285f5b;
+}
+
+
+
+button[type="reset"]:hover {
+    background-color: #b8d8d5;
+    color: #064f4b;
+}
+
+
+
+footer {
+    background: #03413d;
+    color: #c9e8e6;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+    border-top: 4px solid #4aa9a5;
+}
+
+
+footer h2 {
+    color: #e8f4f3;
+    border: none;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #c9e8e6;
+    margin: 8px 0;
+}
+
+footer a {
+    color: #7ed1cd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 17px;
+    }
+
+    main {
+        width: 92%;
+    }
+
+    section {
+        padding: 25px 20px;
+    }
+
+    nav a {
+        font-size: 15px;
+        padding: 8px 14px;
+    }
+
+    button {
+        width: 100%;
+        margin: 8px 0;
+    }
+}

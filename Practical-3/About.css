@@ -1,0 +1,180 @@
+/* admin.css - Green / Teal Theme */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #b8dddd;
+    
+}
+
+header {
+    background: #005c56;
+    padding: 20px 5%;
+    box-shadow: 0 40px 15px rgba(0, 70, 65, 0.25);
+}
+
+
+
+header img {
+    width: 130px;
+    
+    border-radius: 20px;
+    background: #ffffff;
+    padding: 8px;
+    
+}
+
+header h1 {
+    color: #e9f8f7;
+    font-size: 38px;
+    font-family: cursive;
+    letter-spacing: 3px;
+}
+
+nav {
+    background: #08756d;
+    padding: 12px 10px;
+}
+
+nav center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: #e8f7f6;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 8px 18px;
+    background: transparent;
+    border-radius: 20px;
+    border: 1px solid #49aaa2;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #e4f3f2;
+    color: #005c56;
+    
+}
+
+marquee {
+    background: #c9e7e5;
+    color: #07534e;
+    padding: 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    border-bottom: 4px solid #49aaa2;
+}
+
+main {
+    width: 85%;
+    max-width: 1100px;
+    margin: 30px auto;}
+
+section {
+    background: #ffffff;
+    width: 100%;
+    margin: 25px 0;
+    padding: 25px 30px;
+    border-radius: 50px;
+    border-top: 5px solid #49aaa2;
+    box-shadow: 0 4px 12px rgba(0, 70, 65, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:first-child {
+    background: linear-gradient(135deg, #096660, #25c0b5);
+    color: #ffffff;
+    border-top: none;
+}
+
+section:first-child h2 {
+    color: #ffffff;
+    border-bottom: 30px solid #8ed1cb;
+}
+
+section:first-child p {
+    color: #e4f3f2;
+}
+
+
+h2 {
+    color: #07534e;
+    font-size: 24px;
+    margin-bottom: 15px;
+    display: inline-block; /*box ma aakhi line aavi jai */
+    border-bottom: 3px solid #49aaa2;
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #08756d;
+    margin-bottom: 8px;
+}
+
+p {
+    margin: 10px 0;
+    line-height: 1.8;
+    color: #315f5b;
+}
+
+p strong {
+    color: #032321;
+}
+
+ul {
+    margin-left: 20px;
+    list-style-type: square; /*bullet dots*/
+}
+
+li {
+    margin: 10px 0;
+    color: #174f4b;
+}
+
+hr {
+    display: none;
+}
+footer {
+    background: #005c56;
+    color: #021715;
+    text-align: center;
+    font-family: cursive;
+    padding: 40px 20px;
+    margin-top: 50px;
+    border-top: 4px solid #041614;
+}
+
+footer h2 {
+    color: #e8f7f6;
+    border: none;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #c9e3e1;
+    margin: 8px 0;
+}
+
+footer a {
+    color: #8ed1cb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}

@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #b8dddd;
+    color: #064f4b;
+}
+
+header {
+    background: #005c56;
+    padding: 20px 5%;
+    box-shadow: 0 4px 15px rgba(0, 70, 65, 0.25);
+}
+
+header img {
+    width: 130px;
+    height: auto;
+    border-radius: 12px;
+    background: #ffffff;
+    padding: 8px;
+}
+
+header h1 {
+    color: #e9f8f7;
+    font-size: 38px;
+    font-family: cursive;
+    letter-spacing: 3px;
+    margin: 10px 0 5px 0;
+}
+
+nav {
+    background: #08756d;
+    padding: 12px 10px;
+    border-top: 1px solid #49aaa2;
+    margin-top: 15px;
+}
+
+nav center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+nav a {
+    color: #e8f7f6;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 8px 18px;
+    background: #08756d;
+    border-radius: 20px;
+    border: 1px solid #49aaa2;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #e4f3f2;
+    color: #005c56;
+    transform: translateY(-2px);
+}
+
+marquee {
+    background: #c9e7e5;
+    color: #07534e;
+    padding: 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+    border-bottom: 4px solid #49aaa2;
+}
+
+main {
+    width: 85%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+section {
+    background: #ffffff;
+    width: 100%;
+    margin: 25px 0;
+    padding: 30px 35px;
+    border-radius: 20px;
+    border-top: 5px solid #49aaa2;
+}
+
+h2 {
+    color: #07534e;
+    font-size: 28px;
+    margin-bottom: 15px;
+    display: inline-block;
+    border-bottom: 3px solid #49aaa2;
+    padding-bottom: 5px;
+}
+
+section a {
+    color: #08756d;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-spacing: 12px 18px;
+    margin-top: 10px;
+}
+
+td {
+    vertical-align: middle;
+}
+
+td:first-child {
+    font-weight: 600;
+    color: #174f4b;
+    width: 32%;
+    text-align: right;
+    padding-right: 15px;
+}
+
+td:last-child {
+    text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #a9d2cf;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f4fbfa;
+    color: #064f4b;
+    transition: all 0.3s ease;
+}
+
+input[readonly] {
+    background-color: #d8e9e7;
+    color: #52706d;
+    cursor: not-allowed;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #29978e;
+    background-color: #ffffff;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(73, 170, 162, 0.18);
+}
+
+input[type="radio"] {
+    accent-color: #08756d;
+    margin-right: 6px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+input[type="radio"]:first-child {
+    margin-left: 0;
+}
+
+label {
+    color: #315f5b;
+    cursor: pointer;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+    padding: 10px 26px;
+    margin: 10px 8px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"],
+input[type="submit"] {
+    background-color: #08756d;
+    color: #ffffff;
+}
+
+a.back-btn {
+    display: inline-block;
+    background: #08756d;
+    color: #ffffff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+a.back-btn:hover {
+    background: #005c56;
+    color: #ffffff;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+footer {
+    background: #005c56;
+    color: #b9d8d5;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+    border-top: 4px solid #49aaa2;
+}
+
+footer h2 {
+    color: #e8f7f6;
+    border: none;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #c9e3e1;
+    margin: 8px 0;
+}
+
+footer a {
+    color: #8ed1cb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}

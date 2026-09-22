@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - EduCentral Portal</title>
+    <link rel="stylesheet" href="../Practical-3/Feedback.css">
+     <link rel="stylesheet" href="../Practical-3/Theme.css">
+</head>
+<body>
+    <button id="themeToggle">🌙</button>
+
+<header>
+
+<center>
+
+<img src="https://admission.charusat.ac.in/View%20Assets/MainPage/assets/charusat%20images/logo.png" alt="EduCentral Logo" width="120">
+
+<h1>EduCentral Student Portal</h1>
+
+<p><b>Transforming Learning Through Innovation</b></p>
+
+</center>
+
+<nav>
+
+<center>
+
+<a href="Dashborad.html">Dashboard</a> 
+<a href="Event.html">Events</a> 
+<a href="profile.html">Profile</a> 
+<a href="feedback.html">Feedback</a>
+<a href="Home.html">Logout</a>
+
+</center>
+
+</nav>
+
+<marquee>
+Admissions Open for Academic Year 2026 • Hands-on AI & Robotics Workshop Registration Active • Annual Tech Symposium Announced • Mid-Term Examination Dates Declared
+</marquee>
+
+</header>
+
+<main>
+
+<section>
+
+<center>
+
+<h2>Student Experience Feedback</h2>
+
+<p>Thank you for using the EduCentral Student Portal. Your insight helps us enhance platform features and academic services.</p>
+
+<form action="#" method="POST">
+
+    <div class="form-group-title">Personal Details</div>
+
+    <p>
+        <label for="student_fullname">Full Name :</label><br>
+        <input type="text" id="student_fullname" name="student_fullname" placeholder="Enter Full Name" required>
+    </p>
+
+    <p>
+        <label for="student_email">Email Address :</label><br>
+        <input type="email" id="student_email" name="student_email" placeholder="your.email@educentral.ac.in" required>
+    </p>
+
+    <p>
+        <label for="student_id_num">Student Enrollment ID :</label><br>
+        <input type="text" id="student_id_num" name="student_id_num" placeholder="Enter Enrollment ID">
+    </p>
+
+    <p>
+        <label for="student_dept">Department :</label><br>
+        <input type="text" id="student_dept" name="student_dept" placeholder="Information Technology">
+    </p>
+
+    <p>
+        <label for="student_sem">Current Semester :</label><br>
+        <select id="student_sem" name="student_sem">
+            <option value="">Choose Semester</option>
+            <option>Semester 1</option>
+            <option>Semester 2</option>
+            <option>Semester 3</option>
+            <option>Semester 4</option>
+            <option>Semester 5</option>
+            <option>Semester 6</option>
+            <option>Semester 7</option>
+            <option>Semester 8</option>
+        </select>
+    </p>
+
+    <div class="form-group-title" style="margin-top: 30px;">Feedback Details</div>
+
+    <p>
+        <label for="feedback_category">Feedback Category :</label><br>
+        <select id="feedback_category" name="feedback_category" required>
+            <option value="">Select Category</option>
+            <option>Curriculum & Course Materials</option>
+            <option>Portal & Technical Issues</option>
+            <option>Student Advisory & Support</option>
+            <option>Campus Events & Workshops</option>
+            <option>Faculty Instruction</option>
+            <option>General Feedback</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="submission_date">Submission Date :</label><br>
+        <input type="date" id="submission_date" name="submission_date">
+    </p>
+
+    <p>
+        <label>Overall Portal Experience Rating :</label><br>
+        <span class="rating-box">
+            <input type="radio" id="rating1" name="rating" value="1" required>
+            <label for="rating1">1</label>
+
+            <input type="radio" id="rating2" name="rating" value="2">
+            <label for="rating2">2</label>
+
+            <input type="radio" id="rating3" name="rating" value="3">
+            <label for="rating3">3</label>
+
+            <input type="radio" id="rating4" name="rating" value="4">
+            <label for="rating4">4</label>
+
+            <input type="radio" id="rating5" name="rating" value="5">
+            <label for="rating5">5</label>
+        </span>
+    </p>
+
+    <p>
+        <label>Which portal modules do you frequently use? (Select all that apply)</label><br>
+        <span class="checkbox-group">
+            <input type="checkbox" id="feat_events" name="feature" value="Events">
+            <label for="feat_events">Campus Events</label><br>
+
+            <input type="checkbox" id="feat_courses" name="feature" value="Courses">
+            <label for="feat_courses">Academic Courses</label><br>
+
+            <input type="checkbox" id="feat_notes" name="feature" value="Study Notes">
+            <label for="feat_notes">E-Notes & Resources</label><br>
+
+            <input type="checkbox" id="feat_discussion" name="feature" value="Discussion Forum">
+            <label for="feat_discussion">Discussion Forums</label><br>
+
+            <input type="checkbox" id="feat_profile" name="feature" value="Profile">
+            <label for="feat_profile">Student Profile</label>
+        </span>
+    </p>
+
+    <p>
+        <label for="feedback_comments">Detailed Feedback :</label><br>
+        <textarea id="feedback_comments" name="feedback_comments" rows="5" placeholder="Share your experience or observations..." required></textarea>
+    </p>
+
+    <p>
+        <label for="improvement_suggestions">Suggestions for Portal Enhancement :</label><br>
+        <textarea id="improvement_suggestions" name="improvement_suggestions" rows="4" placeholder="How can we improve this platform for you?"></textarea>
+    </p>
+
+    <p>
+        <label for="recommend_portal">Would you recommend EduCentral to fellow students?</label><br>
+        <select id="recommend_portal" name="recommend_portal">
+            <option value="">Choose Response</option>
+            <option>Definitely</option>
+            <option>Probably</option>
+            <option>Not Sure</option>
+        </select>
+    </p>
+
+    <p>
+        <input type="checkbox" id="receive_updates" name="receive_updates">
+        <label for="receive_updates">I wish to receive periodic email notifications regarding upcoming features.</label>
+    </p>
+
+    <p style="margin-top: 25px;">
+        <button type="submit">Submit Feedback</button>
+        <button type="reset">Reset Form</button>
+    </p>
+
+</form>
+
+</center>
+
+</section>
+
+</main>
+
+<footer>
+
+<h2>EduCentral Campus Portal</h2>
+
+<p><strong>Email Address:</strong>
+    <a href="mailto:support@educentral.ac.in">support@educentral.ac.in</a>
+</p>
+
+<p><strong>Contact Number:</strong>
+    <a href="tel:+91 9876543210">+91 9876543210</a>
+</p>
+
+<p><strong>Location:</strong> CHARUSAT Campus, Off Nadiad Highway, Anand, Gujarat</p>
+
+<p>&copy; 2026 EduCentral. All Rights Reserved.</p>
+
+</footer>
+<script src="../Practical-4/Theme.js"></script>
+
+</body>
+</html>

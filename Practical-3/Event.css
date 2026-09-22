@@ -1,0 +1,244 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #b8dddd;
+    color: #064f4b;
+}
+
+
+
+header {
+    background: #005c56;
+    padding: 20px 5%;
+}
+
+header img {
+    width: 130px;
+    height: auto;
+    border-radius: 12px;
+    background: #ffffff;
+    padding: 8px;
+}
+
+header h1 {
+    color: #e9f8f7;
+    font-size: 38px;
+    font-family: cursive;
+    letter-spacing: 3px;
+    margin: 10px 0 5px 0;
+}
+nav {
+    background: #08756d;
+    padding: 12px 10px;
+    border-top: 1px solid #49aaa2;
+    margin-top: 15px;
+}
+
+nav center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+nav a {
+    color: #e8f7f6;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 8px 18px;
+    background: #08756d;
+    border-radius: 20px;
+    border: 1px solid #49aaa2;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #e4f3f2;
+    color: #005c56;
+}
+
+marquee {
+    background: #c9e7e5;
+    color: #07534e;
+    padding: 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    border-bottom: 4px solid #49aaa2;
+}
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 35px auto;
+}
+
+.welcome {
+    background: #ffffff;
+    border-left: 6px solid #49aaa2;
+    padding: 25px 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.welcome h2 {
+    font-size: 28px;
+    color: #07534e;
+    margin-bottom: 6px;
+}
+
+.welcome p {
+    color: #315f5b;
+    font-size: 17px;
+}
+.events {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 30px;
+}
+
+.event-card {
+    background: #ffffff;
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 70, 65, 0.10);
+    border: 1px solid #a9d2cf;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 0 18px 35px rgba(0, 70, 65, 0.15);
+    border-color: #49aaa2;
+}
+
+.date {
+    background: linear-gradient(180deg, #08756d, #005c56);
+    color: #ffffff;
+    width: 120px;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.date h2 {
+    font-size: 42px;
+    color: #ffffff;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1;
+}
+
+.date span {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 6px;
+}
+
+.details {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.details h3 {
+    color: #07534e;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.details p {
+    color: #315f5b;
+    font-size: 15px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.details p i {
+    color: #08756d;
+    margin-right: 8px;
+    width: 18px;
+}
+
+.details a {
+    align-self: flex-start;
+    margin-top: 15px;
+    background: #08756d;
+    color: #ffffff;
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.details a:hover {
+    background: #005c56;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(8, 117, 109, 0.35);
+}
+
+footer {
+    background: #005c56;
+    color: #b9d8d5;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+    border-top: 4px solid #49aaa2;
+}
+
+footer h2 {
+    color: #e8f7f6;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #c9e3e1;
+    margin: 8px 0;
+}
+
+footer a {
+    color: #8ed1cb;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+
+    .events {
+        grid-template-columns: 1fr;
+    }
+
+    .event-card {
+        flex-direction: column;
+    }
+
+    .date {
+        width: 100%;
+        flex-direction: row;
+        gap: 15px;
+        padding: 12px;
+    }
+}
