@@ -4,188 +4,148 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-<title>FAQ - StudentHub Portal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="stylesheet" href="../Practical-3/faq.css">
+    <title>FAQ - StudentHub Portal</title>
 
+    <link rel="stylesheet" href="../Practical-3/faq.css">
 
-<script src="../Practical-4/faq.js" defer></script>
-
+    <script src="../Practical-4&5/faq.js" defer></script>
 
 </head>
+
 
 <body>
 
 <header>
 
-<div class="header-content">
+    <div class="header-content">
+
+        <img src="https://admission.charusat.ac.in/View%20Assets/MainPage/assets/charusat%20images/logo.png"
+            alt="StudentHub Logo">
 
 
-<img src="https://admission.charusat.ac.in/View%20Assets/MainPage/assets/charusat%20images/logo.png" alt="StudentHub Logo">
+        <div class="header-text">
 
-<div class="header-text">
+            <h1>StudentHub Portal</h1>
 
-    <h1>StudentHub Portal</h1>
+            <p>
+                <b>Empowering Students Through Technology</b>
+            </p>
 
-    <p><b>Empowering Students Through Technology</b></p>
+            <br>
 
-    <br>
+        </div>
 
-</div>
-```
+    </div>
 
-</div>
 
-<nav>
+    <nav>
 
-<center>
+        <center>
 
-<a href="home.html">Home</a> <a href="about.html">About</a> <a href="register.html">Register</a> <a href="contact.html">Contact</a> <a href="admin.html">Admin</a> <a href="faq.html">FAQ</a> <a href="login.html">Login</a>
+            <a href="home.html">Home</a>
 
-</center>
+            <a href="about.html">About</a>
 
-</nav>
+            <a href="register.html">Register</a>
 
-<marquee>
+            <a href="contact.html">Contact</a>
 
-Admission Open 2026 • AI Workshop Registration Started • National Hackathon Registration Open • Semester Examination Timetable Released
+            <a href="admin.html">Admin</a>
 
-</marquee>
+            <a href="faq.html">FAQ</a>
+
+            <a href="login.html">Login</a>
+
+        </center>
+
+    </nav>
+
+
+    <marquee>
+
+        Admission Open 2026 • AI Workshop Registration Started • National Hackathon Registration Open • Semester Examination Timetable Released
+
+    </marquee>
 
 </header>
 
+
 <br>
+
 
 <main>
 
+    <h2>Frequently Asked Questions</h2>
 
-<h2>Frequently Asked Questions</h2>
 
 
-<article class="faq">
+    <div class="faq-search">
 
-    <button class="question">
-        1. How do I register on StudentHub?
-    </button>
+        <input
+            type="text"
+            id="faqSearch"
+            placeholder="Search your question..."
+        >
 
-    <p class="answer">
-        Click on the <b>Register</b> page, fill in your details,
-        and submit the registration form.
+    </div>
+
+
+
+    <p id="faqLoading" class="faq-status">
+
+        Loading FAQs...
+
     </p>
 
-</article>
 
 
-<article class="faq">
-
-    <button class="question">
-        2. How do I login?
-    </button>
-
-    <p class="answer">
-        Enter your registered email and password on the Login page.
-    </p>
-
-</article>
+    <p id="faqError" class="faq-status faq-error"></p>
 
 
-<article class="faq">
 
-    <button class="question">
-        3. Can I edit my profile?
-    </button>
+    <div id="faqContainer">
 
-    <p class="answer">
-        Yes. Go to the Profile page and click the
-        <b>Edit Profile</b> button.
-    </p>
-
-</article>
-
-
-<article class="faq">
-
-    <button class="question">
-        4. How can I check my attendance?
-    </button>
-
-    <p class="answer">
-        Login to your Dashboard and open the Attendance section.
-    </p>
-
-</article>
-
-
-<article class="faq">
-
-    <button class="question">
-        5. Where can I see upcoming events?
-    </button>
-
-    <p class="answer">
-        Visit the Events page to view all upcoming university events.
-    </p>
-
-</article>
-
-
-<article class="faq">
-
-    <button class="question">
-        6. I forgot my password. What should I do?
-    </button>
-
-    <p class="answer">
-        Contact the administrator or use the Forgot Password option
-        (if available).
-    </p>
-
-</article>
-
-
-<article class="faq">
-
-    <button class="question">
-        7. How can I contact StudentHub?
-    </button>
-
-    <p class="answer">
-        Visit the Contact page or email us at
-        <b>studenthub@gmail.com</b>.
-    </p>
-
-</article>
+    </div>
 
 
 </main>
 
+
 <div class="footer-links">
 
+    <a href="home.html">Home</a>
 
-<a href="home.html">Home</a>
-<a href="contact.html">Contact</a>
-
+    <a href="contact.html">Contact</a>
 
 </div>
 
+
 <footer>
 
+    <h2>StudentHub Portal</h2>
 
-<h2>StudentHub Portal</h2>
+    <p>
+        <strong>Email:</strong> studenthub@gmail.com
+    </p>
 
-<p><strong>Email:</strong> studenthub@gmail.com</p>
+    <p>
+        <strong>Phone: </strong>+91 9876543210
+    </p>
 
-<p><strong>Phone: </strong>+91 9876543210</p>
+    <p>
+        <strong>Address:</strong> CHARUSAT University, Anand, Gujarat
+    </p>
 
-<p><strong>Address:</strong> CHARUSAT University, Anand, Gujarat</p>
-
-<p>&copy; 2026 StudentHub. All Rights Reserved.</p>
-
+    <p>
+        &copy; 2026 StudentHub. All Rights Reserved.
+    </p>
 
 </footer>
+
 
 </body>
 

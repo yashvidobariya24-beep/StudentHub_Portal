@@ -212,3 +212,112 @@ registerForm.addEventListener("submit", function (event) {
     };
 
 });
+const countrySelect = document.getElementById("country");
+const stateSelect = document.getElementById("state");
+const citySelect = document.getElementById("city");
+
+let locationData = {};
+
+fetch("../Practical-6/register.json")
+    .then(function(response) {
+
+        if (!response.ok) {
+            throw new Error("Failed to load locations.json");
+        }
+
+        return response.json();
+
+    })
+    .then(function(data) {
+
+        locationData = data;
+
+        Object.keys(locationData).forEach(function(country) {
+
+            const option = document.createElement("option");
+
+            option.value = country;
+            option.textContent = country;
+
+            countrySelect.appendChild(option);
+
+        });
+
+        console.log("Location data loaded successfully");
+
+    })
+    .catch(function(error) {
+
+        console.error("Error loading location data:", error);
+
+    });
+
+
+countrySelect.addEventListener("change", function() {
+
+    const country = countrySelect.value;
+
+    stateSelect.innerHTML =
+        '<option value="">Select State</option>';
+
+    citySelect.innerHTML =
+        '<option value="">Select City</option>';
+
+    citySelect.disabled = true;
+
+    if (country === "") {
+
+        stateSelect.disabled = true;
+
+        return;
+    }
+
+    stateSelect.disabled = false;
+
+    const states = Object.keys(locationData[country]);
+
+    states.forEach(function(state) {
+
+        const option = document.createElement("option");
+
+        option.value = state;
+        option.textContent = state;
+
+        stateSelect.appendChild(option);
+
+    });
+
+});
+
+
+stateSelect.addEventListener("change", function() {
+
+    const country = countrySelect.value;
+    const state = stateSelect.value;
+
+    citySelect.innerHTML =
+        '<option value="">Select City</option>';
+
+    if (state === "") {
+
+        citySelect.disabled = true;
+
+        return;
+    }
+
+    citySelect.disabled = false;
+
+    const cities = locationData[country][state];
+
+    cities.forEach(function(city) {
+
+        const option = document.createElement("option");
+
+        option.value = city;
+        option.textContent = city;
+
+        citySelect.appendChild(option);
+
+    });
+
+});

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -38,9 +39,13 @@
         <center>
 
             <a href="dashboard.html">Dashboard</a>
+
             <a href="events.html">Events</a>
+
             <a href="profile.html">Profile</a>
+
             <a href="feedback.html">Feedback</a>
+
             <a href="home.html">Logout</a>
 
         </center>
@@ -55,224 +60,60 @@
 </header>
 
 
-<section class="events">
 
-    <div class="event-card">
+<section class="event-controls">
 
-        <div class="date">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search events..."
+    >
 
-            <h2>10</h2>
 
-            <span>AUG</span>
+    <select id="categoryFilter">
 
-        </div>
+        <option value="all">All Categories</option>
 
+    </select>
 
-        <div class="details">
+    <select id="sortSelect">
 
-            <h3>Hackathon 2026</h3>
+        <option value="default">Sort By</option>
 
-            <p>
-                <i class="fa-solid fa-location-dot"></i>
-                Computer Department
-            </p>
+        <option value="date-asc">Date: Old to New</option>
 
-            <p>
-                <i class="fa-solid fa-clock"></i>
-                10:00 AM
-            </p>
+        <option value="date-desc">Date: New to Old</option>
 
-            <p>
-                24-Hour Coding Competition with exciting prizes.
-            </p>
+        <option value="title-asc">Title: A to Z</option>
 
-            <a href="#">Register</a>
+        <option value="title-desc">Title: Z to A</option>
 
-        </div>
-
-    </div>
-
-
-    <div class="event-card">
-
-        <div class="date">
-
-            <h2>15</h2>
-
-            <span>AUG</span>
-
-        </div>
-
-
-        <div class="details">
-
-            <h3>Independence Day Celebration</h3>
-
-            <p>
-                <i class="fa-solid fa-location-dot"></i>
-                Main Ground
-            </p>
-
-            <p>
-                <i class="fa-solid fa-clock"></i>
-                8:00 AM
-            </p>
-
-            <p>
-                Flag Hoisting, Cultural Program and Speech.
-            </p>
-
-            <a href="#">View Details</a>
-
-        </div>
-
-    </div>
-
-
-    <div class="event-card">
-
-        <div class="date">
-
-            <h2>20</h2>
-
-            <span>AUG</span>
-
-        </div>
-
-
-        <div class="details">
-
-            <h3>Web Development Workshop</h3>
-
-            <p>
-                <i class="fa-solid fa-location-dot"></i>
-                Seminar Hall
-            </p>
-
-            <p>
-                <i class="fa-solid fa-clock"></i>
-                11:00 AM
-            </p>
-
-            <p>
-                Learn HTML, CSS and JavaScript from industry experts.
-            </p>
-
-            <a href="#">Register</a>
-
-        </div>
-
-    </div>
-
-
-    <div class="event-card">
-
-        <div class="date">
-
-            <h2>25</h2>
-
-            <span>AUG</span>
-
-        </div>
-
-
-        <div class="details">
-
-            <h3>Sports Tournament</h3>
-
-            <p>
-                <i class="fa-solid fa-location-dot"></i>
-                Sports Complex
-            </p>
-
-            <p>
-                <i class="fa-solid fa-clock"></i>
-                9:00 AM
-            </p>
-
-            <p>
-                Cricket, Football, Volleyball and Indoor Games.
-            </p>
-
-            <a href="#">Participate</a>
-
-        </div>
-
-    </div>
-
-
-    <div class="event-card">
-
-        <div class="date">
-
-            <h2>30</h2>
-
-            <span>AUG</span>
-
-        </div>
-
-
-        <div class="details">
-
-            <h3>Placement Training</h3>
-
-            <p>
-                <i class="fa-solid fa-location-dot"></i>
-                Auditorium
-            </p>
-
-            <p>
-                <i class="fa-solid fa-clock"></i>
-                2:00 PM
-            </p>
-
-            <p>
-                Aptitude, Resume Building and Interview Preparation.
-            </p>
-
-            <a href="#">Join Now</a>
-
-        </div>
-
-    </div>
-
-
-    <div class="event-card">
-
-        <div class="date">
-
-            <h2>05</h2>
-
-            <span>SEP</span>
-
-        </div>
-
-
-        <div class="details">
-
-            <h3>Teacher's Day Celebration</h3>
-
-            <p>
-                <i class="fa-solid fa-location-dot"></i>
-                Auditorium
-            </p>
-
-            <p>
-                <i class="fa-solid fa-clock"></i>
-                10:30 AM
-            </p>
-
-            <p>
-                Cultural performances and award ceremony.
-            </p>
-
-            <a href="#">View Details</a>
-
-        </div>
-
-    </div>
+    </select>
 
 </section>
+
+
+
+<p id="loadingMessage" class="status-message">
+    Loading events...
+</p>
+
+
+<p id="errorMessage" class="status-message error-message"></p>
+
+
+
+
+<section class="events" id="eventsContainer">
+
+</section>
+
+
+
+
+
+<div id="pagination" class="pagination"></div>
+
 
 
 <footer>
@@ -284,5 +125,9 @@
 </footer>
 
 
+
+<script src="../Practical-4&5/events.js"></script>
+
 </body>
+
 </html>
