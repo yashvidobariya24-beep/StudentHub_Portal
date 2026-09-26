@@ -1,3 +1,11 @@
+<?php
+session_start();
+
+if (!isset($_SESSION["csrf_token"])) {
+    $_SESSION["csrf_token"] = bin2hex(random_bytes(32));
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,10 +52,13 @@
 </header>
 
 
-
-<form id="registerForm" action="login.html" method="GET">
+<form id="registerForm" action="../Practical-7/register.php" method="POST">
 
     <input type="hidden" name="registered" value="success">
+
+    <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+
+    <!-- <input type="hidden" name="csrf_token" value="wrong_token"> -->
 
     <h2>Registration Form</h2>
 
@@ -379,7 +390,7 @@
 
     </table>
 
-</form>
+
 
 </form>
 
@@ -405,7 +416,6 @@
 
 <hr>
 
-<footer>
 
 
 <hr>

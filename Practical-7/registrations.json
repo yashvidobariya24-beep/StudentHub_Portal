@@ -1,0 +1,21 @@
+[
+    
+    {
+        "name": "het bhimani",
+        "email": "25dit007@charusat.edu.in",
+        "mobile": "9274030334",
+        "password": "$2y$10$JRkSQVD0xYWmCZAfD97FU.798lE65FZbbAixsK0D6As418\/wMaqyO",
+        "dob": "2026-09-02",
+        "gender": "Male",
+        "course": "B.Tech IT",
+        "country": "India",
+        "state": "Maharashtra",
+        "city": "Nagpur",
+        "skills": [
+            "C++"
+        ],
+        "address": "pune",
+        "termsAccepted": true,
+        "registeredAt": "2026-09-26 14:36:52"
+    }
+]
