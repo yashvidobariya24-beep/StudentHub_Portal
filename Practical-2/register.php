@@ -52,7 +52,7 @@ if (!isset($_SESSION["csrf_token"])) {
 </header>
 
 
-<form id="registerForm" action="../Practical-7/register.php" method="POST">
+<form id="registerForm" action="../Practical-7&8&9/register.php" method="POST">
 
     <input type="hidden" name="registered" value="success">
 

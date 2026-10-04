@@ -14,13 +14,10 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     die("Invalid request method.");
 }
 
-
 function cleanInput($data)
 {
-    return htmlspecialchars(trim($data), ENT_QUOTES, "UTF-8");
+    return trim($data);
 }
-
-
 
 $name = cleanInput($_POST["name"] ?? "");
 $email = cleanInput($_POST["email"] ?? "");
@@ -36,7 +33,6 @@ $city = cleanInput($_POST["city"] ?? "");
 $address = cleanInput($_POST["address"] ?? "");
 $terms = isset($_POST["terms"]);
 
-
 $skills = $_POST["skill"] ?? [];
 
 if (!is_array($skills)) {
@@ -49,9 +45,6 @@ foreach ($skills as $skill) {
     $cleanSkills[] = cleanInput($skill);
 }
 
-
-
-
 if ($name === "") {
     die("Error: Name is required.");
 }
@@ -60,142 +53,107 @@ if (!preg_match("/^[A-Za-z ]+$/", $name)) {
     die("Error: Name should contain only letters and spaces.");
 }
 
-
 if (!preg_match("/^[0-9]{2}d[a-zA-Z]{2}[0-9]{3}@charusat\.edu\.in$/", $email)) {
     die("Error: Please enter a valid CHARUSAT email.");
 }
-
 
 if (!preg_match("/^[0-9]{10}$/", $mobile)) {
     die("Error: Mobile number must contain exactly 10 digits.");
 }
 
-
 if (!preg_match("/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{8,}$/", $password)) {
     die("Error: Password must contain at least 8 characters, 1 uppercase letter, 1 lowercase letter and 1 number.");
 }
-
 
 if ($password !== $confirmPassword) {
     die("Error: Password and Confirm Password do not match.");
 }
 
-
 if ($dob === "") {
     die("Error: Date of Birth is required.");
 }
-
 
 if ($gender === "") {
     die("Error: Please select gender.");
 }
 
-
 if ($course === "") {
     die("Error: Please select a course.");
 }
-
 
 if ($country === "") {
     die("Error: Please select a country.");
 }
 
-
 if ($state === "") {
     die("Error: Please select a state.");
 }
-
 
 if ($city === "") {
     die("Error: Please select a city.");
 }
 
-
 if (empty($cleanSkills)) {
     die("Error: Please select at least one skill.");
 }
-
 
 if ($address === "") {
     die("Error: Address is required.");
 }
 
-
 if (!$terms) {
     die("Error: You must agree to the Terms & Conditions.");
 }
 
+require_once "db.php";
+
+$checkSql = "SELECT student_id FROM students WHERE email = :email LIMIT 1";
+$checkStmt = $pdo->prepare($checkSql);
+$checkStmt->execute([":email" => $email]);
+
+if ($checkStmt->fetch()) {
+    http_response_code(409);
+    exit("DUPLICATE_EMAIL");
+}
 
 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 
-$student = [
-    "name" => $name,
-    "email" => $email,
-    "mobile" => $mobile,
-    "password" => $hashedPassword,
-    "dob" => $dob,
-    "gender" => $gender,
-    "course" => $course,
-    "country" => $country,
-    "state" => $state,
-    "city" => $city,
-    "skills" => $cleanSkills,
-    "address" => $address,
-    "termsAccepted" => true,
-    "registeredAt" => date("Y-m-d H:i:s")
-];
 
+$skillsData = json_encode($cleanSkills);
 
-$file = __DIR__ . "/registrations.json";
+$sql = "INSERT INTO students
+        (name, email, mobile, password, dob, gender, course, address, country, state, city, skills, terms_accepted)
+        VALUES
+        (:name, :email, :mobile, :password, :dob, :gender, :course, :address, :country, :state, :city, :skills, :terms_accepted)";
 
+$stmt = $pdo->prepare($sql);
 
-if (!file_exists($file)) {
-    file_put_contents($file, "[]");
-}
-
-
-$jsonData = file_get_contents($file);
-
-$registrations = json_decode($jsonData, true);
-
-
-if (!is_array($registrations)) {
-    $registrations = [];
-}
-
-
-$registrations[] = $student;
-
-
-
-$newJsonData = json_encode(
-    $registrations,
-    JSON_PRETTY_PRINT
-);
-
-
-
-if (file_put_contents($file, $newJsonData, LOCK_EX) === false) {
-    die("Error: Unable to save registration data.");
-}
-
+$stmt->execute([
+    ":name" => $name,
+    ":email" => $email,
+    ":mobile" => $mobile,
+    ":password" => $hashedPassword,
+    ":dob" => $dob,
+    ":gender" => $gender,
+    ":course" => $course,
+    ":address" => $address,
+    ":country" => $country,
+    ":state" => $state,
+    ":city" => $city,
+    ":skills" => $skillsData,
+    ":terms_accepted" => 1
+]);
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Registration Success</title>
-
     <style>
-
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #f5f5f5;
@@ -235,27 +193,21 @@ if (file_put_contents($file, $newJsonData, LOCK_EX) === false) {
         a:hover {
             background: #0d2b43;
         }
-
     </style>
-
 </head>
-
 <body>
 
     <div class="success-box">
-
         <h1>Registration Successful!</h1>
 
         <p>
-            Your registration data has been successfully saved.
+            Your registration data has been successfully saved in the database.
         </p>
 
         <a href="../Practical-2/login.html">
             Go to Login
         </a>
-
     </div>
 
 </body>
-
 </html>

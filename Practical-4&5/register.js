@@ -45,10 +45,10 @@
 //     registerform.submit();
 // });
 
-alert("register.js is working");
+
+
 
 const registerForm = document.getElementById("registerForm");
-
 const validationPopup = document.getElementById("validationPopup");
 const popupTitle = document.getElementById("popupTitle");
 const popupMessage = document.getElementById("popupMessage");
@@ -58,13 +58,8 @@ const closePopup = document.getElementById("closePopup");
 function showPopup(title, message, success = false) {
     popupTitle.textContent = title;
     popupMessage.textContent = message;
+    popupTitle.style.color = success ? "green" : "#dc3545";
     validationPopup.style.display = "flex";
-
-    if (success) {
-        popupTitle.style.color = "green";
-    } else {
-        popupTitle.style.color = "#dc3545";
-    }
 }
 
 function hidePopup() {
@@ -73,11 +68,9 @@ function hidePopup() {
 
 closePopup.addEventListener("click", hidePopup);
 
-popupOk.addEventListener("click", function () {
-    hidePopup();
-});
+popupOk.addEventListener("click", hidePopup);
 
-registerForm.addEventListener("submit", function (event) {
+registerForm.addEventListener("submit", async function (event) {
     event.preventDefault();
 
     const name = document.getElementById("name").value.trim();
@@ -87,64 +80,60 @@ registerForm.addEventListener("submit", function (event) {
     const confirmPassword = document.getElementById("confirm").value;
 
     const nameRegex = /^[A-Za-z ]+$/;
-
-    const emailRegex =
-        /^[0-9]{2}d[a-zA-Z]{2}[0-9]{3}@charusat\.edu\.in$/;
-
+    const emailRegex = /^[0-9]{2}d[a-zA-Z]{2}[0-9]{3}@charusat\.edu\.in$/;
     const mobileRegex = /^[0-9]{10}$/;
-
-    const passwordRegex =
-        /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{8,}$/;
 
     if (!nameRegex.test(name)) {
-        showPopup(
-            "Invalid Name",
-            "Name should contain only letters and spaces."
-        );
+        showPopup("Invalid Name", "Name should contain only letters and spaces.");
         return;
     }
 
     if (!emailRegex.test(email)) {
-        showPopup(
-            "Invalid Email",
-            "Please enter a valid CHARUSAT email."
-        );
+        showPopup("Invalid Email", "Please enter a valid CHARUSAT email.");
         return;
     }
 
     if (!mobileRegex.test(mobile)) {
-        showPopup(
-            "Invalid Mobile Number",
-            "Mobile number must contain exactly 10 digits."
-        );
+        showPopup("Invalid Mobile Number", "Mobile number must contain exactly 10 digits.");
         return;
     }
 
     if (!passwordRegex.test(password)) {
-        showPopup(
-            "Invalid Password",
-            "Password must contain at least 8 characters, 1 uppercase letter, 1 lowercase letter and 1 number."
-        );
+        showPopup("Invalid Password", "Password must contain at least 8 characters, 1 uppercase letter, 1 lowercase letter and 1 number.");
         return;
     }
 
     if (password !== confirmPassword) {
-        showPopup(
-            "Password Mismatch",
-            "Password and Confirm Password do not match."
-        );
+        showPopup("Password Mismatch", "Password and Confirm Password do not match.");
         return;
     }
 
-    showPopup(
-        "Registration Successful!",
-        "Your data is ready to be submitted.",
-        true
-    );
+    const formData = new FormData(registerForm);
 
-    popupOk.onclick = function () {
+    try {
+        const response = await fetch("../Practical-7&8&9/check_email.php", {
+            method: "POST",
+            body: formData
+        });
+
+        const result = await response.json();
+
+        if (result.status === "duplicate") {
+            showPopup("Duplicate Email", result.message);
+            return;
+        }
+
+        if (!response.ok || result.status !== "available") {
+            showPopup("Email Check Error", result.message || "Unable to verify email.");
+            return;
+        }
+
+        registerForm.action = "../Practical-7&8&9/process_register.php";
         registerForm.submit();
-    };
+    } catch (error) {
+        showPopup("Connection Error", "Unable to check email. Please try again.");
+    }
 });
 
 const countrySelect = document.getElementById("country");
@@ -158,7 +147,6 @@ fetch("../Practical-6/register.json")
         if (!response.ok) {
             throw new Error("Failed to load register.json");
         }
-
         return response.json();
     })
     .then(function (data) {
@@ -172,12 +160,8 @@ fetch("../Practical-6/register.json")
 countrySelect.addEventListener("change", function () {
     const country = countrySelect.value;
 
-    stateSelect.innerHTML =
-        '<option value="">Select State</option>';
-
-    citySelect.innerHTML =
-        '<option value="">Select City</option>';
-
+    stateSelect.innerHTML = '<option value="">Select State</option>';
+    citySelect.innerHTML = '<option value="">Select City</option>';
     citySelect.disabled = true;
 
     if (country === "") {
@@ -191,10 +175,8 @@ countrySelect.addEventListener("change", function () {
 
     states.forEach(function (state) {
         const option = document.createElement("option");
-
         option.value = state;
         option.textContent = state;
-
         stateSelect.appendChild(option);
     });
 });
@@ -203,8 +185,7 @@ stateSelect.addEventListener("change", function () {
     const country = countrySelect.value;
     const state = stateSelect.value;
 
-    citySelect.innerHTML =
-        '<option value="">Select City</option>';
+    citySelect.innerHTML = '<option value="">Select City</option>';
 
     if (state === "") {
         citySelect.disabled = true;
@@ -213,14 +194,12 @@ stateSelect.addEventListener("change", function () {
 
     citySelect.disabled = false;
 
-    const cities = locationData[country][state];
+    const cities = (locationData[country] || {})[state] || [];
 
     cities.forEach(function (city) {
         const option = document.createElement("option");
-
         option.value = city;
         option.textContent = city;
-
         citySelect.appendChild(option);
     });
 });
