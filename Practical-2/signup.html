@@ -55,101 +55,189 @@ Admissions Open for Academic Year 2026 • Hands-on AI & Robotics Workshop Regis
     <a href="login.html">Sign In Here</a>
 </p>
 
-<form id="signupform">
+<form id="signupform" action="../Practical-7/process.php" method="POST">
 
     <table>
 
-    <tr>
-        <td><label for="fullname">Full Name</label></td>
-        <td><input type="text" id="fullname" placeholder="Enter Your Complete Name" required></td>
-    </tr>
+        <tr>
+            <td>
+                <label for="fullname">Full Name</label>
+            </td>
+            <td>
+                <input type="text"
+                       id="fullname"
+                       name="fullname"
+                       placeholder="Enter Your Complete Name"
+                       required>
+            </td>
+        </tr>
 
-    <tr>
-        <td><label for="emailadder">Email Address</label></td>
-        <td><input type="email" id="emailaddr" placeholder="Enter Official Email" required></td>
-    </tr>
+        <tr>
+            <td>
+                <label for="emailaddr">Email Address</label>
+            </td>
+            <td>
+                <input type="email"
+                       id="emailaddr"
+                       name="email"
+                       placeholder="Enter Official Email"
+                       required>
+            </td>
+        </tr>
 
-    <tr>
-        <td><label for="phone">Phone Number</label></td>
-        <td><input type="tel" id="phone" placeholder="Enter Contact Number" required></td>
-    </tr>
+        <tr>
+            <td>
+                <label for="phone">Phone Number</label>
+            </td>
+            <td>
+                <input type="tel"
+                       id="phone"
+                       name="phone"
+                       placeholder="Enter Contact Number"
+                       required>
+            </td>
+        </tr>
 
-    <tr>
-        <td><label for="pass">Password</label></td>
-        <td><input type="password" id="pass" placeholder="Create Password" required></td>
-    </tr>
+        <tr>
+            <td>
+                <label for="pass">Password</label>
+            </td>
+            <td>
+                <input type="password"
+                       id="pass"
+                       name="password"
+                       placeholder="Create Password"
+                       required>
+            </td>
+        </tr>
 
-    <tr>
-        <td><label for="confirmpass">Re-enter Password</label></td>
-        <td><input type="password" id="confirmpass" placeholder="Confirm Password" required></td>
-    </tr>
+        <tr>
+            <td>
+                <label for="confirmpass">Re-enter Password</label>
+            </td>
+            <td>
+                <input type="password"
+                       id="confirmpass"
+                       name="confirmPassword"
+                       placeholder="Confirm Password"
+                       required>
+            </td>
+        </tr>
 
-    <tr>
-        <td><label for="birthdate">Date of Birth</label></td>
-        <td><input type="date" id="birthdate" required></td>
-    </tr>
+        <tr>
+            <td>
+                <label for="birthdate">Date of Birth</label>
+            </td>
+            <td>
+                <input type="date"
+                       id="birthdate"
+                       name="birthdate"
+                       required>
+            </td>
+        </tr>
 
-    <tr>
-        <td>Gender</td>
-        <td>
-            <input type="radio" name="gender" id="m">
-            <label for="m">Male</label>
+        <tr>
+            <td>Gender</td>
+            <td>
+                <input type="radio" name="gender" id="m" value="Male">
+                <label for="m">Male</label>
 
-            <input type="radio" name="gender" id="f">
-            <label for="f">Female</label>
+                <input type="radio" name="gender" id="f" value="Female">
+                <label for="f">Female</label>
 
-            <input type="radio" name="gender" id="o">
-            <label for="o">Other</label>
-        </td>
-    </tr>
+                <input type="radio" name="gender" id="o" value="Other">
+                <label for="o">Other</label>
+            </td>
+        </tr>
 
-    <tr>
-        <td><label for="program">Degree Program</label></td>
-        <td>
-            <select id="program">
-                <option>Choose Program</option>
-                <option>B.Tech Computer Science & Engg.</option>
-                <option>B.Tech Computer Engg.</option>
-                <option>B.Tech Information Technology</option>
-            </select>
-        </td>
-    </tr>
+        <tr>
+            <td>
+                <label for="program">Degree Program</label>
+            </td>
 
-    <tr>
-        <td>Technical Skills</td>
-        <td>
-            <input type="checkbox"> C Language
-            <input type="checkbox"> C++
-            <input type="checkbox"> Java
-            <input type="checkbox"> Python
-        </td>
-    </tr>
+            <td>
+                <select id="program" name="program" required>
+                    <option value="">Choose Program</option>
+                    <option value="B.Tech Computer Science & Engineering">
+                        B.Tech Computer Science & Engg.
+                    </option>
 
-    <tr>
-        <td><label for="residence">Residential Address</label></td>
-        <td>
-            <textarea id="residence" rows="3" cols="25" placeholder="Enter Address Details"></textarea>
-        </td>
-    </tr>
+                    <option value="B.Tech Computer Engineering">
+                        B.Tech Computer Engg.
+                    </option>
 
-    <tr>
-        <td colspan="2" align="center">
-            <input type="checkbox" id="terms" required>
-            <label for="terms">I accept the Terms & Institutional Policies</label>
-        </td>
-    </tr>
+                    <option value="B.Tech Information Technology">
+                        B.Tech Information Technology
+                    </option>
+                </select>
+            </td>
+        </tr>
 
-    <tr>
-        <td colspan="2" align="center">
-            <button type="submit">Submit Registration</button>
-            <button type="reset">Reset Form</button>
-        </td>
-    </tr>
+        <tr>
+            <td>Technical Skills</td>
+
+            <td>
+                <input type="checkbox" name="skills[]" value="C">
+                C Language
+
+                <input type="checkbox" name="skills[]" value="C++">
+                C++
+
+                <input type="checkbox" name="skills[]" value="Java">
+                Java
+
+                <input type="checkbox" name="skills[]" value="Python">
+                Python
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="residence">Residential Address</label>
+            </td>
+
+            <td>
+                <textarea id="residence"
+                          name="residence"
+                          rows="3"
+                          cols="25"
+                          placeholder="Enter Address Details"></textarea>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center">
+
+                <input type="checkbox"
+                       id="terms"
+                       name="terms"
+                       value="accepted"
+                       required>
+
+                <label for="terms">
+                    I accept the Terms & Institutional Policies
+                </label>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center">
+
+                <button type="submit">
+                    Submit Registration
+                </button>
+
+                <button type="reset">
+                    Reset Form
+                </button>
+
+            </td>
+        </tr>
 
     </table>
 
 </form>
-
 </center>
 
 </section>

@@ -1,0 +1,167 @@
+[
+  {
+    "id": 1,
+    "title": "Annual Hackathon 2026",
+    "date": "2026-08-10",
+    "month": "AUG",
+    "location": "Computer Science Department",
+    "time": "10:00 AM Onwards",
+    "description": "Intense 24-hour hackathon with cash awards and mentorship opportunities.",
+    "category": "Technical",
+    "action": "Register Now"
+  },
+  {
+    "id": 2,
+    "title": "Independence Day Assembly",
+    "date": "2026-08-15",
+    "month": "AUG",
+    "location": "University Central Lawn",
+    "time": "08:00 AM",
+    "description": "Flag hoisting ceremony followed by patriotic songs and student speeches.",
+    "category": "Cultural",
+    "action": "View Schedule"
+  },
+  {
+    "id": 3,
+    "title": "Web Engineering Bootcamp",
+    "date": "2026-08-20",
+    "month": "AUG",
+    "location": "Main Seminar Hall",
+    "time": "11:00 AM",
+    "description": "Hands-on training session covering HTML5, CSS3, and modern JavaScript techniques.",
+    "category": "Technical",
+    "action": "Reserve Seat"
+  },
+  {
+    "id": 4,
+    "title": "Inter-College Sports Meet",
+    "date": "2026-08-25",
+    "month": "AUG",
+    "location": "Sports Complex & Arena",
+    "time": "09:00 AM",
+    "description": "Multi-sport championship including Cricket, Football, Volleyball, and Chess.",
+    "category": "Sports",
+    "action": "Participate"
+  },
+  {
+    "id": 5,
+    "title": "Placement Skills Workshop",
+    "date": "2026-08-30",
+    "month": "AUG",
+    "location": "University Auditorium",
+    "time": "02:00 PM",
+    "description": "Interactive guidance on logical reasoning, resume formatting, and mock interviews.",
+    "category": "Workshop",
+    "action": "Enroll Now"
+  },
+  {
+    "id": 6,
+    "title": "Teachers' Day Celebration",
+    "date": "2026-09-05",
+    "month": "SEP",
+    "location": "University Auditorium",
+    "time": "10:30 AM",
+    "description": "Special student performances, faculty felicitations, and cultural evening.",
+    "category": "Cultural",
+    "action": "View Program"
+  },
+  {
+    "id": 7,
+    "title": "AI & Machine Learning Workshop",
+    "date": "2026-09-10",
+    "month": "SEP",
+    "location": "AI Lab",
+    "time": "11:00 AM",
+    "description": "Introduction to artificial intelligence, machine learning and practical applications.",
+    "category": "Technical",
+    "action": "Register Now"
+  },
+  {
+    "id": 8,
+    "title": "Coding Competition",
+    "date": "2026-09-15",
+    "month": "SEP",
+    "location": "Programming Lab",
+    "time": "10:00 AM",
+    "description": "Competitive programming contest covering algorithms and data structures.",
+    "category": "Technical",
+    "action": "Participate"
+  },
+  {
+    "id": 9,
+    "title": "Navratri Celebration",
+    "date": "2026-09-20",
+    "month": "SEP",
+    "location": "University Ground",
+    "time": "06:00 PM",
+    "description": "Traditional Garba and cultural celebration organized for students.",
+    "category": "Cultural",
+    "action": "View Schedule"
+  },
+  {
+    "id": 10,
+    "title": "Cyber Security Seminar",
+    "date": "2026-09-25",
+    "month": "SEP",
+    "location": "Main Seminar Hall",
+    "time": "01:00 PM",
+    "description": "Seminar covering cyber security, ethical hacking and online safety.",
+    "category": "Seminar",
+    "action": "Register Now"
+  },
+  {
+    "id": 11,
+    "title": "Football Championship",
+    "date": "2026-10-02",
+    "month": "OCT",
+    "location": "Sports Ground",
+    "time": "09:00 AM",
+    "description": "Inter-department football championship for university students.",
+    "category": "Sports",
+    "action": "Participate"
+  },
+  {
+    "id": 12,
+    "title": "Resume Building Workshop",
+    "date": "2026-10-08",
+    "month": "OCT",
+    "location": "Placement Cell",
+    "time": "02:00 PM",
+    "description": "Learn how to create an effective resume and improve your professional profile.",
+    "category": "Workshop",
+    "action": "Enroll Now"
+  },
+  {
+    "id": 13,
+    "title": "Tech Symposium 2026",
+    "date": "2026-10-15",
+    "month": "OCT",
+    "location": "University Auditorium",
+    "time": "10:00 AM",
+    "description": "Annual technology symposium featuring expert talks and student projects.",
+    "category": "Technical",
+    "action": "Register Now"
+  },
+  {
+    "id": 14,
+    "title": "Photography Competition",
+    "date": "2026-10-20",
+    "month": "OCT",
+    "location": "Central Campus",
+    "time": "11:00 AM",
+    "description": "Photography competition encouraging students to capture campus life creatively.",
+    "category": "Cultural",
+    "action": "Participate"
+  },
+  {
+    "id": 15,
+    "title": "Chess Tournament",
+    "date": "2026-10-25",
+    "month": "OCT",
+    "location": "Student Activity Center",
+    "time": "09:30 AM",
+    "description": "Inter-college chess tournament for beginner and advanced players.",
+    "category": "Sports",
+    "action": "Register Now"
+  }
+]

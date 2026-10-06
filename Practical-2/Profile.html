@@ -1,179 +1,484 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Profile - EduCentral</title>
+
+    <title>Student Profile - EduCentral Portal</title>
+
+    <!-- Profile CSS -->
     <link rel="stylesheet" href="../Practical-3/Profile.css">
-     <link rel="stylesheet" href="../Practical-3/Theme.css">
-    
-    </head>
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="../Practical-3/Theme.css">
+
+</head>
+
 
 <body>
-    <button id="themeToggle">🌙</button>
 
-<header>
 
-<center>
+    <!-- ================= HEADER ================= -->
 
-<img src="https://admission.charusat.ac.in/View%20Assets/MainPage/assets/charusat%20images/logo.png" alt="EduCentral Logo" width="120">
+    <header>
 
-<h1>SCHOLARS POINT</h1>
+        <center>
 
-</center>
+            <!-- CHARUSAT LOGO -->
 
-<nav>
+            <img
+                src="charusat-logo.png"
+                alt="CHARUSAT Logo"
+            >
 
-<center>
 
-<a href="Dashborad.html">Dashboard</a> 
-<a href="Event.html">Events</a> 
-<a href="profile.html">Profile</a> 
-<a href="feedback.html">Feedback</a>
-<a href="Home.html">Logout</a>
+            <!-- TITLE -->
 
-</center>
+            <h1>
+                EduCentral Student Portal
+            </h1>
 
-</nav>
 
-<marquee>
-Admissions Open for Academic Year 2026 • 
-</marquee>
+            <p>
+                Student Profile
+            </p>
 
-</header>
+        </center>
 
-<main>
 
-<div class="container">
+        <!-- ================= NAVIGATION ================= -->
 
-    <!-- Profile Header Banner -->
-    <div class="profile-header">
-        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Student Profile Picture">
-        <h2>Student Account Profile</h2>
-        <p>Department of Information Technology</p>
-        <span class="badge">Semester 3</span>
-    </div>
+        <nav>
 
-    <!-- Academic Metrics Stats -->
-    <div class="stats">
-        <div class="card">
-            <i class="fa-solid fa-graduation-cap"></i>
-            <h2>8.75</h2>
-            <p>CGPA</p>
-        </div>
+            <center>
 
-        <div class="card">
-            <i class="fa-solid fa-user-check"></i>
-            <h2>96%</h2>
-            <p>Attendance</p>
-        </div>
+                <a href="profile.html">
+                    Profile
+                </a>
 
-        <div class="card">
-            <i class="fa-solid fa-folder-open"></i>
-            <h2>3</h2>
-            <p>Active Projects</p>
-        </div>
+                <a href="Home.html">
+                    Home
+                </a>
 
-        <div class="card">
-            <i class="fa-solid fa-book"></i>
-            <h2>7</h2>
-            <p>Completed Tasks</p>
-        </div>
-    </div>
+                <a href="Login.html">
+                    Logout
+                </a>
 
-    <!-- Personal & Contact Information -->
-    <section class="section">
-        <h2>Personal Details</h2>
+            </center>
 
-        <div class="details">
-            <div>
-                <h4>Enrollment Number</h4>
-                <p>25DIT014</p>
+        </nav>
+
+    </header>
+
+
+
+    <!-- ================= MARQUEE ================= -->
+
+    <marquee>
+
+        Welcome to your Student Profile
+
+    </marquee>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+
+        <!-- IMPORTANT:
+             CSS mein .container hai
+        -->
+
+        <div class="container">
+
+
+            <!-- ================= PROFILE HEADER ================= -->
+
+            <div class="profile-header">
+
+
+                <!-- PROFILE IMAGE -->
+
+                <img
+                    src="profile.jpg"
+                    alt="Student Profile"
+                >
+
+
+                <!-- STUDENT NAME -->
+
+                <h2 id="profileName">
+                    Student Account Profile
+                </h2>
+
+
+                <!-- DEPARTMENT -->
+
+                <p id="profileDepartment">
+                    Department of Information Technology
+                </p>
+
+
+                <!-- SEMESTER -->
+
+                <span
+                    class="badge"
+                    id="profileSemester"
+                >
+                    Semester 3
+                </span>
+
+
             </div>
 
-            <div>
-                <h4>Date of Birth</h4>
-                <p>17-09-2007</p>
+
+
+            <!-- ================= STATS ================= -->
+
+            <div class="stats">
+
+
+                <!-- CGPA -->
+
+                <div class="card">
+
+                    <i>🎓</i>
+
+                    <h2>
+                        8.75
+                    </h2>
+
+                    <p>
+                        CGPA
+                    </p>
+
+                </div>
+
+
+
+                <!-- ATTENDANCE -->
+
+                <div class="card">
+
+                    <i>📊</i>
+
+                    <h2>
+                        96%
+                    </h2>
+
+                    <p>
+                        Attendance
+                    </p>
+
+                </div>
+
+
+
+                <!-- PROJECTS -->
+
+                <div class="card">
+
+                    <i>💻</i>
+
+                    <h2>
+                        3
+                    </h2>
+
+                    <p>
+                        Active Projects
+                    </p>
+
+                </div>
+
+
+
+                <!-- TASKS -->
+
+                <div class="card">
+
+                    <i>✅</i>
+
+                    <h2>
+                        7
+                    </h2>
+
+                    <p>
+                        Completed Tasks
+                    </p>
+
+                </div>
+
+
             </div>
 
-            <div>
-                <h4>Email Address</h4>
-                <p>student014@educentral.ac.in</p>
+
+
+            <!-- ================= PERSONAL DETAILS ================= -->
+
+            <div class="section">
+
+
+                <h2>
+                    Personal Details
+                </h2>
+
+
+
+                <div class="details">
+
+
+                    <!-- STUDENT ID -->
+
+                    <div>
+
+                        <h4>
+                            Enrollment ID
+                        </h4>
+
+                        <p id="profileId">
+                            25DIT014
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- DOB -->
+
+                    <div>
+
+                        <h4>
+                            Date of Birth
+                        </h4>
+
+                        <p id="profileDob">
+                            17-09-2007
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div>
+
+                        <h4>
+                            Email
+                        </h4>
+
+                        <p id="profileEmail">
+                            student014@educentral.ac.in
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- PHONE -->
+
+                    <div>
+
+                        <h4>
+                            Phone
+                        </h4>
+
+                        <p id="profilePhone">
+                            +91 9876543210
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- DEPARTMENT -->
+
+                    <div>
+
+                        <h4>
+                            Branch
+                        </h4>
+
+                        <p id="profileDepartment2">
+                            Information Technology
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- ADDRESS -->
+
+                    <div>
+
+                        <h4>
+                            Address
+                        </h4>
+
+                        <p id="profileAddress">
+                            Anand, Gujarat, India
+                        </p>
+
+                    </div>
+
+
+                </div>
+
             </div>
 
-            <div>
-                <h4>Contact Number</h4>
-                <p>+91 9876543210</p>
+
+
+            <!-- ================= TECHNICAL SKILLS ================= -->
+
+            <div class="section">
+
+
+                <h2>
+                    Technical Skills
+                </h2>
+
+
+                <div class="skills">
+
+                    <span>
+                        HTML
+                    </span>
+
+                    <span>
+                        CSS
+                    </span>
+
+                    <span>
+                        JavaScript
+                    </span>
+
+                    <span>
+                        Java
+                    </span>
+
+                    <span>
+                        C++
+                    </span>
+
+                    <span>
+                        Python
+                    </span>
+
+                    <span>
+                        SQL
+                    </span>
+
+                </div>
+
+
             </div>
 
-            <div>
-                <h4>Academic Branch</h4>
-                <p>Information Technology</p>
+
+
+            <!-- ================= ACCOMPLISHMENTS ================= -->
+
+            <div class="section">
+
+
+                <h2>
+                    Accomplishments
+                </h2>
+
+
+                <ul>
+
+                    <li>
+                        Completed Object Oriented Programming course
+                    </li>
+
+                    <li>
+                        Participated in technical projects
+                    </li>
+
+                    <li>
+                        Completed multiple web development practicals
+                    </li>
+
+                    <li>
+                        Participated in college events and activities
+                    </li>
+
+                </ul>
+
+
             </div>
 
-            <div>
-                <h4>Residential Address</h4>
-                <p>Anand, Gujarat, India</p>
+
+
+            <!-- ================= BUTTONS ================= -->
+
+            <div class="buttons">
+
+
+                <a href="edit.html">
+                    Edit Profile
+                </a>
+
+
+                <a href="Dashborad.html">
+                    Dashboard
+                </a>
+
+
+                <a href="Home.html">
+                    Home
+                </a>
+
+
             </div>
+
+
         </div>
-    </section>
 
-    <!-- Technical Skills -->
-    <section class="section">
-        <h2>Technical Competencies</h2>
+    </main>
 
-        <div class="skills">
-            <span>C Programming</span>
-            <span>C++</span>
-            <span>Java</span>
-            <span>HTML5</span>
-            <span>CSS3</span>
-            <span>JavaScript</span>
-            <span>Algorithmic Problem Solving</span>
-        </div>
-    </section>
 
-    <!-- Academic Accomplishments -->
-    <section class="section">
-        <h2>Key Accomplishments</h2>
 
-        <ul>
-            <li>🏆 1st Rank - University Annual Coding Challenge</li>
-            <li>💻 Completed Hands-on Web Development Bootcamp</li>
-            <li>🚀 Active Participant - National Student Hackathon</li>
-            <li>📜 Certified Java Application Developer</li>
-        </ul>
-    </section>
+    <!-- ================= FOOTER ================= -->
 
-    <!-- Quick Navigation Links -->
-    <div class="buttons">
-        <a href="edit.html">Edit Profile Details</a>
-        <a href="dashboard.html">Back to Dashboard</a>
-        <a href="home.html">Sign Out</a>
-    </div>
+    <footer>
 
-</div>
+        <h2>
+            EduCentral Student Portal
+        </h2>
 
-</main>
+        <p>
+            © 2026 EduCentral Student Portal
+        </p>
 
-<footer>
+        <p>
+            All Rights Reserved
+        </p>
 
-<h2>EduCentral Campus Portal</h2>
+    </footer>
 
-<p><strong>Email Address:</strong>
-    <a href="mailto:support@educentral.ac.in">support@educentral.ac.in</a>
-</p>
 
-<p><strong>Contact Number:</strong>
-    <a href="tel:+91 9876543210">+91 9876543210</a>
-</p>
 
-<p><strong>Location:</strong> CHARUSAT Campus, Off Nadiad Highway, Anand, Gujarat</p>
+    <!-- ================= THEME BUTTON ================= -->
 
-<p>&copy; 2026 EduCentral. All Rights Reserved.</p>
+    <button id="themeToggle">
+        🌙
+    </button>
 
-</footer>
-<script src="../Practical-4/Theme.js"></script>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="../Practical-4/Theme.js"></script>
+
+    <script src="../Practical-6/profile.js"></script>
+
 
 </body>
+
 </html>

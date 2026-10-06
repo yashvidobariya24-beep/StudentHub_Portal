@@ -251,3 +251,61 @@ footer a:hover {
     color: #ffffff;
     text-decoration: underline;
 }
+
+/* =========================
+   WEATHER CARD
+========================= */
+
+/*.weather-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 7px 12px;
+
+    background: white;
+    color: #222;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+
+    margin-right: 10px;
+}
+
+.weather-icon {
+    font-size: 28px;
+}
+
+.weather-info {
+    line-height: 1.2;
+}
+
+.temperature {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.weather-city {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.weather-condition {
+    font-size: 11px;
+    color: #666;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+/*body.dark-mode .weather-card {
+    background: #222;
+    color: white;
+}
+
+body.dark-mode .weather-condition {
+    color: #ccc;
+}
