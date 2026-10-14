@@ -1,8 +1,4 @@
--- ==============================================================
--- Practical 10: Secure Login/Logout with Sessions, Role-Based Access,
--- Timeout, and Remember-Me Token
--- Database: studenthub
--- ==============================================================
+
 
 CREATE DATABASE IF NOT EXISTS `studenthub`
 CHARACTER SET utf8mb4
