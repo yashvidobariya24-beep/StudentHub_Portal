@@ -39,11 +39,11 @@
 
                 <a href="events.html">Events</a>
 
-                <a href="profile.html">Profile</a>
+                <a href="profile.php">Profile</a>
 
                 <a href="feedback.html">Feedback</a>
 
-                <a href="home.html">Logout</a>
+                <a href="../Practical-7&8&9/logout.php">Logout</a>
 
             </center>
 
@@ -80,9 +80,10 @@
 
                     <i class="fa-solid fa-bell"></i>
 
-                    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User">
-
-                    <span>Het Bhimani</span>
+                    <a href="profile.php" title="View Profile" style="display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit;cursor:pointer;">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User">
+                        <span id="topbarUserName"><?= htmlspecialchars($_SESSION["name"] ?? "Student") ?></span>
+                    </a>
 
                 </div>
 
@@ -91,9 +92,9 @@
 
             <div class="welcome">
 
-                <h1>Welcome Back Het Bhimani👋</h1>
+                <h1 id="welcomeHeading">Welcome Back <?= htmlspecialchars($_SESSION["name"] ?? "Student") ?> 👋</h1>
 
-                <p>B.Tech Information Technology</p>
+                <p id="welcomeCourse">B.Tech Information Technology</p>
 
             </div>
 
@@ -154,7 +155,7 @@
 
                         <h2>Quick Links</h2>
 
-                        <a href="profile.html">
+                        <a href="profile.php">
                             <i class="fa-solid fa-user"></i> My Profile
                         </a>
 

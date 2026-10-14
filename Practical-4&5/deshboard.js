@@ -2,12 +2,48 @@ const successPopup = document.getElementById("successPopup");
 
 const params = new URLSearchParams(window.location.search);
 
-if (params.get("login") === "success") {
+if (params.get("login") === "success" && successPopup) {
     successPopup.style.display = "block";
 
     setTimeout(function () {
         successPopup.style.display = "none";
     }, 5000);
+}
+
+// Automatically update logged-in student's name on dashboard
+function updateDashboardUserInfo() {
+    fetch("../Practical-7&8&9/get_current_user.php")
+        .then(function (response) {
+            if (!response.ok) {
+                throw new Error("Failed to fetch user session");
+            }
+            return response.json();
+        })
+        .then(function (data) {
+            if (data.loggedIn && data.name) {
+                const userSpans = document.querySelectorAll(".user span, #topbarUserName");
+                userSpans.forEach(function (el) {
+                    el.textContent = data.name;
+                });
+
+                const welcomeHeading = document.getElementById("welcomeHeading") || document.querySelector(".welcome h1");
+                if (welcomeHeading) {
+                    welcomeHeading.textContent = "Welcome Back " + data.name + " 👋";
+                }
+
+                const welcomeCourse = document.getElementById("welcomeCourse") || document.querySelector(".welcome p");
+                if (welcomeCourse && data.course) {
+                    welcomeCourse.textContent = data.course;
+                }
+            }
+        })
+        .catch(function () {});
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", updateDashboardUserInfo);
+} else {
+    updateDashboardUserInfo();
 }
 
 const themeToggle = document.getElementById("themeToggle");

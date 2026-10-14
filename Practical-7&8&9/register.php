@@ -33,16 +33,19 @@ $city = cleanInput($_POST["city"] ?? "");
 $address = cleanInput($_POST["address"] ?? "");
 $terms = isset($_POST["terms"]);
 
-$skills = $_POST["skill"] ?? [];
+$skills = $_POST["skill"] ?? $_POST["skills"] ?? [];
 
 if (!is_array($skills)) {
-    $skills = [$skills];
+    $skills = $skills !== "" ? [$skills] : [];
 }
 
 $cleanSkills = [];
 
 foreach ($skills as $skill) {
-    $cleanSkills[] = cleanInput($skill);
+    $val = cleanInput($skill);
+    if ($val !== "") {
+        $cleanSkills[] = $val;
+    }
 }
 
 if ($name === "") {
@@ -61,7 +64,7 @@ if (!preg_match("/^[0-9]{10}$/", $mobile)) {
     die("Error: Mobile number must contain exactly 10 digits.");
 }
 
-if (!preg_match("/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{8,}$/", $password)) {
+if (!preg_match("/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$/", $password)) {
     die("Error: Password must contain at least 8 characters, 1 uppercase letter, 1 lowercase letter and 1 number.");
 }
 

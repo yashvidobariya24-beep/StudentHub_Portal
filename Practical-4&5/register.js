@@ -82,7 +82,7 @@ registerForm.addEventListener("submit", async function (event) {
     const nameRegex = /^[A-Za-z ]+$/;
     const emailRegex = /^[0-9]{2}d[a-zA-Z]{2}[0-9]{3}@charusat\.edu\.in$/;
     const mobileRegex = /^[0-9]{10}$/;
-    const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{8,}$/;
+    const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$/;
 
     if (!nameRegex.test(name)) {
         showPopup("Invalid Name", "Name should contain only letters and spaces.");
@@ -109,6 +109,44 @@ registerForm.addEventListener("submit", async function (event) {
         return;
     }
 
+    const genderSelected = document.querySelector('input[name="gender"]:checked');
+    if (!genderSelected) {
+        showPopup("Gender Required", "Please select your gender.");
+        return;
+    }
+
+    const courseSelect = document.getElementById("course");
+    if (!courseSelect || !courseSelect.value) {
+        showPopup("Course Required", "Please select a course.");
+        return;
+    }
+
+    const countryVal = document.getElementById("country").value;
+    const stateVal = document.getElementById("state").value;
+    const cityVal = document.getElementById("city").value;
+    if (!countryVal || !stateVal || !cityVal) {
+        showPopup("Location Required", "Please select Country, State, and City.");
+        return;
+    }
+
+    const checkedSkills = document.querySelectorAll('input[name="skill"]:checked, input[name="skill[]"]:checked');
+    if (checkedSkills.length === 0) {
+        showPopup("Skill Required", "Please select at least one skill.");
+        return;
+    }
+
+    const addressVal = document.getElementById("address").value.trim();
+    if (!addressVal) {
+        showPopup("Address Required", "Please enter your address.");
+        return;
+    }
+
+    const termsChecked = document.getElementById("terms").checked;
+    if (!termsChecked) {
+        showPopup("Terms Required", "You must agree to the Terms & Conditions.");
+        return;
+    }
+
     const formData = new FormData(registerForm);
 
     try {
@@ -129,10 +167,10 @@ registerForm.addEventListener("submit", async function (event) {
             return;
         }
 
-        registerForm.action = "../Practical-7&8&9/process_register.php";
+        registerForm.action = "../Practical-7&8&9/register.php";
         registerForm.submit();
     } catch (error) {
-        showPopup("Connection Error", "Unable to check email. Please try again.");
+        showPopup("Connection Error", "Unable to connect to database or check email. Please try again.");
     }
 });
 

@@ -25,13 +25,18 @@ if (!preg_match('/^[0-9]{2}d[a-zA-Z]{2}[0-9]{3}@charusat\.edu\.in$/', $email)) {
     exit;
 }
 
-require_once "db.php";
+try {
+    require_once "db.php";
 
-$stmt = $pdo->prepare("SELECT student_id FROM students WHERE email = :email LIMIT 1");
-$stmt->execute([":email" => $email]);
+    $stmt = $pdo->prepare("SELECT student_id FROM students WHERE email = :email LIMIT 1");
+    $stmt->execute([":email" => $email]);
 
-if ($stmt->fetch()) {
-    echo json_encode(["status" => "duplicate", "message" => "This email is already registered. Please use another email."]);
-} else {
-    echo json_encode(["status" => "available", "message" => "Email is available."]);
+    if ($stmt->fetch()) {
+        echo json_encode(["status" => "duplicate", "message" => "This email is already registered. Please use another email."]);
+    } else {
+        echo json_encode(["status" => "available", "message" => "Email is available."]);
+    }
+} catch (Exception $e) {
+    http_response_code(500);
+    echo json_encode(["status" => "error", "message" => "Database error: " . $e->getMessage()]);
 }

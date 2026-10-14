@@ -304,22 +304,22 @@ if (!isset($_SESSION["csrf_token"])) {
             <td>
 
                 <label>
-                    <input type="checkbox" name="skill" value="C">
+                    <input type="checkbox" name="skill[]" value="C">
                     C
                 </label>
 
                 <label>
-                    <input type="checkbox" name="skill" value="C++">
+                    <input type="checkbox" name="skill[]" value="C++">
                     C++
                 </label>
 
                 <label>
-                    <input type="checkbox" name="skill" value="Java">
+                    <input type="checkbox" name="skill[]" value="Java">
                     Java
                 </label>
 
                 <label>
-                    <input type="checkbox" name="skill" value="Python">
+                    <input type="checkbox" name="skill[]" value="Python">
                     Python
                 </label>
 
